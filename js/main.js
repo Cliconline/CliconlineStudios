@@ -1,6 +1,6 @@
 $(document).ready(function(){
    
-
+    
 // Objeto del Banner
 var banner = {
     padre: $('#banner'),
