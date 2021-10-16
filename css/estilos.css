@@ -41,11 +41,14 @@ a {	text-decoration: none; }
 	overflow: hidden;
 	z-index: 1000;
 	position: relative;
+	height: 300px;
 }
 
 .slider_banner .banner {
 	position: relative;
 	width: 100%; 
+	
+
 }
 
 .slider_banner .banner img {
@@ -108,7 +111,7 @@ a {	text-decoration: none; }
 .slider_info .flecha-info {
 	font-size: 25px;
 	line-height: 25px;
-	color: rgb(2, 238, 255);
+	color: rgba(0, 0, 0, 0.233);
 	position: absolute;
 	top:50%;
 	z-index: 1000;
