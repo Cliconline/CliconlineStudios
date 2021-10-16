@@ -41,7 +41,7 @@ a {	text-decoration: none; }
 	overflow: hidden;
 	z-index: 1000;
 	position: relative;
-	height: 20%;
+	height: auto;
 }
 
 .slider_banner .banner {
@@ -62,7 +62,7 @@ a {	text-decoration: none; }
 .slider_banner .flecha-banner {
 	font-size: 25px;
 	line-height: 15px;
-	color: rgb(2, 238, 255);
+	color: rgb(66, 212, 205);
 	position: absolute;
 	top:50%;
 	z-index: 1100;
