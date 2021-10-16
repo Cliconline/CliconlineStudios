@@ -15,6 +15,22 @@ body {
 
 a {	text-decoration: none; }
 
+.boton {
+	font-size: 20px;
+	text-decoration: none;
+	margin: 10px 20px 10px 0px;
+	background: #3e9eb6;
+	color: rgb(255, 255, 255);
+	display: inline-block;
+	padding: 10px 20%; 
+	border-radius: 10px;
+}
+.boton:hover {
+	background-color: cornflowerblue;
+  cursor: pointer;
+
+}
+
 .contenedor {
 	width: 95%;
 	max-width: 700px;
@@ -41,7 +57,9 @@ a {	text-decoration: none; }
 	overflow: hidden;
 	z-index: 1000;
 	position: relative;
-	height: 300px;
+	max-height: 300px;
+	min-height: auto;
+
 }
 
 .slider_banner .banner {
@@ -140,18 +158,21 @@ a {	text-decoration: none; }
 	margin-bottom: 16px;
 }
 
+
 .slider_info .informacion .trabajo {
 	color: #55acee;
 	font-size: 14px;
 	line-height: 18px;
 	margin-bottom: 16px;
 }
+  
 
 .slider_info .informacion .cate {
 	color: #8d8d8d;
 	font-family: 14px;
 	line-height: 14px;
 	height: 30%;
+	position: relative;
 }
 
 .slider_info .informacion .cate img {
