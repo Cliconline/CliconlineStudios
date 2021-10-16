@@ -41,7 +41,7 @@ a {	text-decoration: none; }
 	overflow: hidden;
 	z-index: 1000;
 	position: relative;
-	height: auto;
+	height: 300px;
 }
 
 .slider_banner .banner {
