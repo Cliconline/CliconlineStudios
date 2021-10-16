@@ -57,8 +57,7 @@ a {	text-decoration: none; }
 	overflow: hidden;
 	z-index: 1000;
 	position: relative;
-	max-height: 300px;
-	min-height: auto;
+	height: fit-content;
 
 }
 
