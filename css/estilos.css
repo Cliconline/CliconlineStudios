@@ -33,7 +33,7 @@ a {	text-decoration: none; }
 	border-radius: 15px;
 	overflow: hidden;
 	z-index: 1000;
-	height: 100%;
+
 }
 
 /* --------------------------------------- */
@@ -44,6 +44,7 @@ a {	text-decoration: none; }
 	overflow: hidden;
 	z-index: 1000;
 	position: relative;
+	height: 300px;
 	
 
 }
