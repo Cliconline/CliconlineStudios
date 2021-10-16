@@ -30,7 +30,7 @@ var altoBanner = function () {
         'height': alto + 'px'
     });
 }
-
+altoBanner();
 
 
     var altoinfo = function () {
@@ -42,15 +42,13 @@ var altoBanner = function () {
 
 
 
-
-altoBanner();
 altoinfo();
 
 
 
 $(window).resize(function(){
-    altoBanner();
     altoinfo();
+    altoBanner();
 });
 // ---------------------------------------
 // ----- Banner
