@@ -15,21 +15,7 @@ body {
 
 a {	text-decoration: none; }
 
-.boton {
-	font-size: 20px;
-	text-decoration: none;
-	margin: 10px 20px 10px 0px;
-	background: #3e9eb6;
-	color: rgb(255, 255, 255);
-	display: inline-block;
-	padding: 10px 20%; 
-	border-radius: 10px;
-}
-.boton:hover {
-	background-color: cornflowerblue;
-  cursor: pointer;
 
-}
 
 .contenedor {
 	width: 95%;
@@ -47,6 +33,7 @@ a {	text-decoration: none; }
 	border-radius: 15px;
 	overflow: hidden;
 	z-index: 1000;
+	height: 100%;
 }
 
 /* --------------------------------------- */
@@ -57,7 +44,7 @@ a {	text-decoration: none; }
 	overflow: hidden;
 	z-index: 1000;
 	position: relative;
-	height: fit-content;
+	
 
 }
 
@@ -74,6 +61,8 @@ a {	text-decoration: none; }
 	position: absolute;
 	top: 0;
 	left: 100%;
+
+
 }
 
 .slider_banner .flecha-banner {

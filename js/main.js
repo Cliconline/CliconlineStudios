@@ -222,44 +222,6 @@ $('#info-prev').on('click', function(e){
 
 });
 
-// Boton Siguiente info
 
-$('#boton').on('click', function(e){
-    e.preventDefault();
-
-    if (info.posicion < info.numeroSlides){
-        info.padre.children().not('.active').css({
-            'left': '100%'
-        });
-
-        $('#info .active').removeClass('active').next().addClass('active').animate({
-            'left': 0
-        });
-
-        $('#info .active').prev().animate({
-            'left': '-100%'
-        });
-
-        info.posicion = info.posicion + 1;
-    } else {
-        $('#info .active').animate({
-            'left': '-100%'
-        });
-
-        info.padre.children().not('.active').css({
-            'left': '100%'
-        });
-
-        $('#info .active').removeClass('active');
-        info.padre.children().first().addClass('active').animate({
-            'left': 0
-        });
-
-        // Reseteamos la posicion a 1
-        info.posicion = 1;
-    }
-    altoinfo();
-
-});
 
 });
