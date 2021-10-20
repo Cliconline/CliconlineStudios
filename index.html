@@ -22,9 +22,13 @@
 
 			 <!-- banner -->
 		 <div class="banner" >
-			 <section class="btincio">
+			
 				<a href="javascript:Mostrar()" class="botoninicio" id="inicio" ><span class="fa fa-home"></span ></a>
-			   </section>
+
+			<a href="javascript:costos()" class="back" id="back" ><span class="material-back">
+				arrow_back_ios
+				</span></a>
+		
 			<img class="portada" src="img/b11-01.png" alt="">
 
 			<a href="whatsapp://send?text=Enviado%20desde%20la%20App%20de%20Cliconline%20Ver%20Tarjeta%20Digital%20aqui%20https://cliconline.github.io/CliconlineStudios/" class="share" id="share" ><span class="material-icons">share</span></a>
@@ -59,7 +63,7 @@
 			<p class="cata1"><img src="https://1.bp.blogspot.com/-Xru5J3jSLY0/YH5PgsfbtRI/AAAAAAAAEK4/SrNt9m7RpuMKQ3glImEKDdTE2h8ByOsqACLcBGAsYHQ/w303-h226/categorias.png" alt="imagen1"></p>
 			<br>
 			<section class="bt2">
-				<a href="javascript:categorias()" class="boton2" id="" >Categorias Y Costos</a>
+				<a href="javascript:categorias()" class="boton2" id="costos" >Categorias Y Costos</a>
 			   </section>
 			<br>
 			<br>
@@ -85,12 +89,10 @@
 			<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player autoplay="" background="transparent" loop="" speed="1" src="https://assets9.lottiefiles.com/private_files/lf30_UlXgnV.json" style="height: 200px; width: 200px center;"></lottie-player>
 		<section class="bt2">
-			<a href="javascript:Ocultar()" class="boton2" id="inicio" >Bares Y Restaurantes</a>
-		
-		   </section>
-	</section>
+			<a href="javascript:Ocultar()" class="boton2" id="inicio" >Bares Y Restaurantes</a></section>
+	    </section>
 		<br>
-		</section>
+		             </section>
 
  <!-- redes sociales  -->
 		<section class="redes-sociales" id="redes">
@@ -112,6 +114,7 @@
              data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true">
              </div>
 			<p>Debeloped by CliconlineStudios</p>	
+			<button id="home">Home</button>
 			
 
     </footer>
@@ -123,12 +126,20 @@
  </div>
 
 </body>
+<script>
+
+const home = document.getElementById('home');
+
+    home.addEventListener('click', e=> {
+    history.pushState(null, 'Home', '/home');
+});
+
+
+
+
+</script>
 
 	<script src="js/main.js"></script>
 
-	<script type="text/javascript">
-		window.onbeforeunload = function() {
-			return "¿Estás seguro que deseas salir de la actual página?"
-		}
-	  </script>
+
 </html>
