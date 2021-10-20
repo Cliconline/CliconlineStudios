@@ -23,7 +23,7 @@
 			 <!-- banner -->
 		 <div class="banner" >
 			 <section class="btincio">
-				<a href="javascript:Mostrar()" class="botoninicio" id="inicio" >INICIO</a>
+				<a href="javascript:Mostrar()" class="botoninicio" id="inicio" ><span class="fa fa-home"></span ></a>
 			   </section>
 			<img class="portada" src="img/b11-01.png" alt="">
 
@@ -111,7 +111,8 @@
              <div class="fb-like" data-href="https://www.facebook.com/cliconlineStudios/"
              data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true">
              </div>
-			<p>Debeloped by CliconlineStudios</p>			
+			<p>Debeloped by CliconlineStudios</p>	
+			
 
     </footer>
    
@@ -124,4 +125,10 @@
 </body>
 
 	<script src="js/main.js"></script>
+
+	<script type="text/javascript">
+		window.onbeforeunload = function() {
+			return "¿Estás seguro que deseas salir de la actual página?"
+		}
+	  </script>
 </html>
