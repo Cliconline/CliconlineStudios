@@ -18,39 +18,110 @@
 <body>
 	
  <div class="contenedor">
-	 <section class="tarjeta"> 
+	 <section class="tarjeta" id="tarjeta"> 
+
+			 <!-- banner -->
 		 <div class="banner" >
+			 <section class="btincio">
+				<a href="javascript:Mostrar()" class="botoninicio" id="inicio" >INICIO</a>
+			   </section>
 			<img class="portada" src="img/b11-01.png" alt="">
+
+			<a href="whatsapp://send?text=Enviado%20desde%20la%20App%20de%20Cliconline%20Ver%20Tarjeta%20Digital%20aqui%20https://cliconline.github.io/CliconlineStudios/" class="share" id="share" ><span class="material-icons">share</span></a>
+
+			<a href="https://drive.google.com/u/0/uc?id=1DqW2tGa2OhflXNlJL7t5D9ryyOS5mnX0&export=download" class="descarga" id="share" ><span class="material-icons">
+				file_download
+				</span></a>
+	
+		
 		 </div>
 	 <br>
-<section class="informacion">
-			 <p><h2 class="titulo">CEO Wiliam paredes</h2></p>
+	 <!-- incio informacion -->
+
+<section class="informacion" id="informacion">
+			 <p><h2 class="titulo">CEO Wiliam Paredes</h2></p>
 			 <p><h2 class="subtitulo">Asesor en Marketing Digital</h2></p>
 			 <br>
 			 <section class="bt">
-			 <a href="#" class="boton" >INICIO</a>
+			 <a href="javascript:Ocultar()" class="boton" id="inicio" ><span class="fa fa-home"></span >&nbsp;INICIO</a>
 			</section>
-			<br><br>
-			 <p class="imagen1"><img src="https://1.bp.blogspot.com/-Xru5J3jSLY0/YH5PgsfbtRI/AAAAAAAAEK4/SrNt9m7RpuMKQ3glImEKDdTE2h8ByOsqACLcBGAsYHQ/w303-h226/categorias.png" width="50%" alt="logo"></p>
-             <p>Tarjetas de Digital de Presentacion y Negocios </p>
+			<br>
+		<p>Tarjetas Digital de Presentacion y Negocios </p>
+		<br>
+         <p class="qr"><img src="img/qrclick.png" alt="logo"></p>
+		 <p class="scan">Scan Me</p>
 		</section>
 
-		<section class="redes-sociales">
-			<a href="#" class="whatsapp" ><span class="fa fa-whatsapp" ></span ></a>
-			<a href="#" class="facebook"><span class="fa fa-facebook"></span></a>
-			<a href="#" class="instagram"><span class="fa fa-instagram"></span></a>
-			<a href="#" class="phone"><span class="fa fa-phone"></span></a>
+ <!-- portafolios -->
+
+		<section class="portafolio" id="portafolio">
+			<h3 class="subtitulo1">Tarjetas Digitales</h3>
+			<p class="cata1"><img src="https://1.bp.blogspot.com/-Xru5J3jSLY0/YH5PgsfbtRI/AAAAAAAAEK4/SrNt9m7RpuMKQ3glImEKDdTE2h8ByOsqACLcBGAsYHQ/w303-h226/categorias.png" alt="imagen1"></p>
+			<br>
+			<section class="bt2">
+				<a href="javascript:categorias()" class="boton2" id="" >Categorias Y Costos</a>
+			   </section>
+			<br>
+			<br>
+			<section class="bt2">
+				<a href="javascript:comofunciona()" class="boton2" id="" >¿ Como funciona ?</a>
+			   </section>
+			<br><br>
+			 <div class="planes">
+			 <h3 class="subtitulo3">Plan de Manejo de Redes Sociales</h3>
+			
+				<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+				<lottie-player autoplay="" background="transparent" loop="" speed="1" src="https://assets10.lottiefiles.com/packages/lf20_rivprhd2.json" 
+				style="height: 200px; width: 200px center;"></lottie-player>
+
+				<section class="bt2">
+					<a href="javascript:planes()" class="boton2" id="" >Conoce Nuestros Planes</a>
+				   </section>
+				<br>
+		      </div>
+			  <br>
+		<section>
+			<h3 class="subtitulo3">Cartas Y Menus QR</h3>
+			<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player autoplay="" background="transparent" loop="" speed="1" src="https://assets9.lottiefiles.com/private_files/lf30_UlXgnV.json" style="height: 200px; width: 200px center;"></lottie-player>
+		<section class="bt2">
+			<a href="javascript:Ocultar()" class="boton2" id="inicio" >Bares Y Restaurantes</a>
+		
+		   </section>
+	</section>
+		<br>
+		</section>
+
+ <!-- redes sociales  -->
+		<section class="redes-sociales" id="redes">
+			<a href="https://api.whatsapp.com/send?phone=593998968077" class="whatsapp" ><span class="fa fa-whatsapp"></span ></a>
+			<a href="https://www.facebook.com/cliconlineStudios/" class="facebook"><span class="fa fa-facebook"></span></a>
+			<a href="https://www.instagram.com/cliconlinestudios/" class="instagram"><span class="fa fa-instagram"></span></a>
+			<a href="tel:0998968077" class="phone"><span class="fa fa-phone"></span></a>
 			
 		</section>
+
+		<footer>
+			<!-- Load Facebook SDK for JavaScript -->
+			<div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" 
+             src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0&appId=487629422084211&autoLogAppEvents=1" nonce="RZda65WK">
+          </script>
+         <!-- Your like button code -->
+             <div class="fb-like" data-href="https://www.facebook.com/cliconlineStudios/"
+             data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true">
+             </div>
+			<p>Debeloped by CliconlineStudios</p>			
+
+    </footer>
    
-		<footer>Debeloped by CliconlineStudios</footer>
-   
-		</section>
+	
 
 	 </section>
 
  </div>
 
 </body>
+
 	<script src="js/main.js"></script>
 </html>

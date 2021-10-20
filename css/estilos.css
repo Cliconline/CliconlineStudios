@@ -15,7 +15,7 @@ body {
 
 .contenedor {
 	width: 95%;
-	max-width: 600px;
+	max-width: 700px;
 	margin: auto;
 	height: 100%;
 	align-items:center;
@@ -33,12 +33,13 @@ body {
 
 .banner {
 	width: 100%;
-	animation: banner 7s infinite linear ;
+	animation: banner 8s infinite linear ;
 	background-size: 100% 100%;
 	position: static;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 .portada  {
@@ -63,8 +64,11 @@ body {
 		background-image: url(../img/banner4.jpg);
 	}
 }
+
+/* ----- ----- inicio informacion ----- ----- */
 .informacion {
 	text-align: center;
+
 }
 
 
@@ -81,6 +85,40 @@ body {
 	margin-bottom: 16px;
 	text-align: center;
 }
+
+
+.botoninicio {
+	position: absolute;
+	background: linear-gradient(102deg, #0998f7 40%, #0998f7 60%);
+	color: #ffffff;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+	padding: 8px 5%;
+	border-radius: 10px;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+	left: 1px;
+	top: 1px;
+	display: none;
+	margin: 10px 8px;
+
+}
+.share {
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	top: 10px;
+	right: 10px;	
+}
+
+.descarga {
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	top: 50px;
+	right: 10px;	
+}
+
 
 .boton {
 	background: linear-gradient(102deg, #0998f7 40%, #1619d4 60%);
@@ -115,13 +153,46 @@ body {
 	
 }
 
-.informacion .imagen1 {
+.informacion .qr img {
 	text-align: center;
-	width: 100%;
+	width: 30%;
 	vertical-align: top;
-	margin: 0%;
+	margin: 0%;	
+}
+.informacion .scan {
+      color: #C13584;
+}
+
+/* ----- ----- portafolios ----- ----- */
+.portafolio {
+	text-align: center;
+	display: none;
+}
+.portafolio .cata1 img {
+	width: 40%;
+}
+.portafolio .texto1 {
+	text-align: center;
+	font-size: 18px;
+	padding: 0px 15px;
+}
+.boton2 {
+	background: linear-gradient(102deg, #0099ff 40%, #0099ffd2 60%);
+	color: #fffffff1;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 10%;
+	border-radius: 10px;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
 	
 }
+
+.boton2:hover {
+	background: linear-gradient(102deg, #0099ffa8 40%, #0099ff85 60%);
+	color: #ffffff;
+}
+
 
 /* ----- ----- Redes Sociales ----- ----- */
 
@@ -139,8 +210,8 @@ body {
 	padding: 12px 0;
 	border-radius: 50%;
 	font-size: 16px;
-	color: #fff;
-	margin: 5px 10px;
+	color: rgb(255, 255, 255);
+	margin: 1px 10px;
 }
 
 .redes-sociales a:hover {
@@ -151,6 +222,7 @@ body {
 .redes-sociales .facebook { background: #3b5998; }
 .redes-sociales .phone { background: #55acee; }
 .redes-sociales .instagram { background: #C13584; }
+
 
 footer {
 
@@ -179,4 +251,32 @@ footer {
 	.redes-sociales .phone { background: none }
 	.redes-sociales .instagram { background: none }
 }
-	
+
+/* iconos banner */
+@font-face {
+	font-family: 'Material Icons Outlined';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/materialiconsoutlined/v81/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2');
+  }
+  .material-icons {
+	font-family: 'Material Icons Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 19px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	background: rgba(0, 0, 0, 0.562);
+	padding: 5px 4px;
+	border-radius: 10px;
+  }
+  
+  .material-icons:hover {
+	  background-color: rgb(27, 118, 255);
+  }
