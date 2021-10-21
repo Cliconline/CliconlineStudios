@@ -94,8 +94,8 @@ body {
 	text-decoration: none;
 	border-radius: 10px;
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
-	right: 12px;
-	bottom: 2px;
+	right: 16px;
+	bottom: 10px;
 	display: none;
 	animation: pulse 1.7s ;	
 }
@@ -305,7 +305,7 @@ footer {
 	font-family: 'Material Icons Outlined';
 	font-weight: normal;
 	font-style: normal;
-	font-size: 20px;
+	font-size: 22px;
 	line-height: 1;
 	letter-spacing: normal;
 	text-transform: none;
