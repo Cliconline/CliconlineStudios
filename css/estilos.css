@@ -13,6 +13,10 @@ body {
 	font-family:'Open Sans',Sans-serif, Arial, Helvetica;
 }
 
+lottie-player {
+	margin: 0 auto;
+	vertical-align: top;
+}
 .contenedor {
 	width: 95%;
 	max-width: 700px;
@@ -366,3 +370,20 @@ footer {
 		    background-image: url(../img/bg2.png);
 		
 			}
+
+			/* ----- ----- inicio informacion ----- ----- */
+.comofunciona {
+	text-align: center;
+	padding: 0px 10px;
+	display: none;
+}
+
+.comofunciona img {
+	width: 35%;
+	vertical-align: top;
+}
+
+.comofunciona p {
+	font-size: 16px;
+	padding: 2px 2px;
+}

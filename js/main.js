@@ -5,6 +5,7 @@ function inicio() {
     document.getElementById("portafolio").style.display = "none";
     document.getElementById("back").style.display = "none";
     document.getElementById("costos").style.display = "none";
+    document.getElementById("comofunciona").style.display = "none";
     contador=0;
 }
 
@@ -44,6 +45,7 @@ function back() {
     else{
         document.getElementById("portafolio").style.display = "block";
         document.getElementById("costos").style.display = "none";
+        document.getElementById("comofunciona").style.display = "none";
         contador=1;
     }
     
@@ -59,7 +61,13 @@ function back() {
         
     }
 
-
+    function comofunciona() {
+        document.getElementById("portafolio").style.display = "none";
+        document.getElementById("comofunciona").style.display = "block";
+        contador=2;
+        
+        
+    }
 
 
 
