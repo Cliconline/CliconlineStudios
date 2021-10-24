@@ -72,9 +72,9 @@ function back() {
     }
 
     function planes() {
-        document.getElementById("portafolio").style.display = "none";
         document.getElementById("planes").style.display = "block";
-        contador=2;
+        document.getElementById("portafolio").style.display = "none";
+        contador=3;
         
         
     }
