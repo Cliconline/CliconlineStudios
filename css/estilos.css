@@ -387,3 +387,19 @@ footer {
 	font-size: 16px;
 	padding: 2px 2px;
 }
+
+.planes {
+ text-align: center;
+ padding: 0px 10px;
+ display: none;
+}
+
+.planes p {
+	font-size: 16px;
+	padding: 2px 2px;
+}
+
+.planes ul li {
+	font-size: 16px;
+	padding: 2px 2px;
+}

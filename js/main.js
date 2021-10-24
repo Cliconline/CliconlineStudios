@@ -6,6 +6,7 @@ function inicio() {
     document.getElementById("back").style.display = "none";
     document.getElementById("costos").style.display = "none";
     document.getElementById("comofunciona").style.display = "none";
+    document.getElementById("planes").style.display = "none";
     contador=0;
 }
 
@@ -46,6 +47,7 @@ function back() {
         document.getElementById("portafolio").style.display = "block";
         document.getElementById("costos").style.display = "none";
         document.getElementById("comofunciona").style.display = "none";
+        document.getElementById("planes").style.display = "none";
         contador=1;
     }
     
@@ -64,6 +66,14 @@ function back() {
     function comofunciona() {
         document.getElementById("portafolio").style.display = "none";
         document.getElementById("comofunciona").style.display = "block";
+        contador=2;
+        
+        
+    }
+
+    function planes() {
+        document.getElementById("portafolio").style.display = "none";
+        document.getElementById("planes").style.display = "block";
         contador=2;
         
         
