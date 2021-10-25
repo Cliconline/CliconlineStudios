@@ -7,9 +7,10 @@
 }
 
 body {
-	background: url('../img/bg.png');
-	background-size: cover;
+	background: url('../img/bg2.png');
+	background-repeat: no-repeat;
 	background-attachment: fixed;
+
 	font-family:'Open Sans',Sans-serif, Arial, Helvetica;
 }
 
@@ -135,11 +136,20 @@ lottie-player {
 	right: 10px;	
 }
 
+
 .descarga {
 	position: absolute;
 	text-decoration: none;
 	color: #fff;
 	top: 50px;
+	right: 10px;	
+}
+
+.pago {
+	position: absolute;
+	text-decoration: none;
+	color: rgb(115, 255, 0);
+	top: 95px;
 	right: 10px;	
 }
 
@@ -261,9 +271,21 @@ footer {
 
 @media screen  and  (min-width: 800px){
 	body { 
-		background: url('../img/bg2.png');
+		background: url('../img/bg.png');
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 }
+
+@media screen  and  (min-width: 800px){
+	body .contenedor .tarjeta{ 
+	width: 600px;
+	}
+}
+
+
+
+
 
 @media screen  and  (max-width: 290px){
 	.redes-sociales a { 
@@ -322,6 +344,31 @@ footer {
 	padding: 5px 4px;
 	border-radius: 10px;
 
+  }
+
+  .materialpago {
+	font-family: 'Material Icons Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 25px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	background: rgba(0, 0, 0, 0.562);
+	padding: 5px 4px;
+	border-radius: 10px;
+
+  }
+
+
+  .materialpago:hover{
+	  background: rgba(144, 194, 44, 0.753);
+	  color: #fff;
   }
 
   /* ----- ----- costos ----- ----- */
