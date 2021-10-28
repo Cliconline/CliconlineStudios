@@ -75,7 +75,9 @@ lottie-player {
 	text-align: center;
 
 }
-
+.informacion img {
+	width: 6%;
+}
 
 .informacion .titulo  {
 	text-align: center;
@@ -157,10 +159,10 @@ lottie-player {
 .boton {
 	background: linear-gradient(102deg, #0998f7 40%, #1619d4 60%);
 	color: #fffffff1;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: center;
 	text-decoration: none;
-	padding: 10px 20%;
+	padding: 8px 18%;
 	border-radius: 10px;
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
     animation: pulse 1.5s infinite;	
@@ -194,7 +196,8 @@ lottie-player {
 	margin: 0%;	
 }
 .informacion .scan {
-      color: #C13584;
+      color: #080077;
+	  font-size: 12px;
 }
 
 /* ----- ----- portafolios ----- ----- */
@@ -268,7 +271,6 @@ footer {
 	font-size: 14px;
 }
 
-
 @media screen  and  (min-width: 800px){
 	body { 
 		background: url('../img/bg.png');
@@ -276,13 +278,6 @@ footer {
 		background-repeat: no-repeat;
 	}
 }
-
-@media screen  and  (min-width: 800px){
-	body .contenedor .tarjeta{ 
-	width: 600px;
-	}
-}
-
 
 
 
