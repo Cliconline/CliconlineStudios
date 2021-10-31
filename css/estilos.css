@@ -14,10 +14,18 @@ body {
 	font-family:'Open Sans',Sans-serif, Arial, Helvetica;
 }
 
+.particles-js {
+	height: 100%; 
+	width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
 lottie-player {
 	margin: 0 auto;
 	vertical-align: top;
 }
+
 .contenedor {
 	width: 95%;
 	max-width: 700px;
@@ -85,12 +93,17 @@ lottie-player {
 	padding: 5px;
 }
 
+
 .informacion .subtitulo {
 	color: #55acee;
 	font-size: 16px;
 	line-height: 18px;
 	margin-bottom: 16px;
 	text-align: center;
+}
+
+.informacion p {
+	font-size: 14px;
 }
 
 .back {
@@ -271,6 +284,7 @@ footer {
 	font-size: 14px;
 }
 
+
 @media screen  and  (min-width: 800px){
 	body { 
 		background: url('../img/bg.png');
@@ -279,7 +293,11 @@ footer {
 	}
 }
 
-
+@media screen  and  (min-width: 1200px){
+  .descarga, .pago { 
+	display: none;
+	}
+}
 
 
 @media screen  and  (max-width: 290px){
