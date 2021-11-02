@@ -32,9 +32,50 @@ if (contador==0) {
 else{
 
 }
-
-
 }
+
+function categorias() {
+    document.getElementById("informacion").style.display = "none";	
+    document.getElementById("portafolio").style.display = "none";
+    document.getElementById("costos").style.display = "block";
+    document.getElementById("back").style.display = "block";
+    document.getElementById("side").style.display = "none";
+    document.getElementById("informacion").style.display = "none";
+    document.getElementById("planes").style.display = "none";
+    document.getElementById("comofunciona").style.display = "none";
+    conta=0;
+    contador=2;
+    
+    
+}
+
+function comofunciona() {
+    document.getElementById("portafolio").style.display = "none";
+    document.getElementById("comofunciona").style.display = "block";
+    document.getElementById("side").style.display = "none";
+    document.getElementById("informacion").style.display = "none";
+    document.getElementById("back").style.display = "block";
+    document.getElementById("costos").style.display = "none";
+    document.getElementById("planes").style.display = "none";
+    conta=0;
+    contador=2;
+    
+    
+}
+
+function planes() {
+    document.getElementById("planes").style.display = "block";
+    document.getElementById("portafolio").style.display = "none";
+    document.getElementById("side").style.display = "none";
+    document.getElementById("informacion").style.display = "none";
+    document.getElementById("back").style.display = "block";
+    document.getElementById("comofunciona").style.display = "none";
+    document.getElementById("costos").style.display = "none";
+    conta=0;
+    contador=3;     
+}
+
+//   boton atras
 
 function back() {
 
@@ -45,13 +86,6 @@ function back() {
         document.getElementById("side").style.display = "none";
         conta=0;
         contador=0;
-        document.getElementById("back")
-        .addEventListener('click',()=>{
-         window.scrollTo({
-         top: 0,
-         behavior: 'smooth'
-        });
-        });
 
     }
     else{
@@ -60,13 +94,6 @@ function back() {
         document.getElementById("comofunciona").style.display = "none";
         document.getElementById("planes").style.display = "none";
         contador=1;
-        document.getElementById("back")
-        .addEventListener('click',()=>{
-         window.scrollTo({
-         top: 0,
-         behavior: 'smooth'
-        });
-        });
 
     }
     
@@ -74,48 +101,7 @@ function back() {
     }
 
 
-    function categorias() {
-        document.getElementById("informacion").style.display = "none";	
-        document.getElementById("portafolio").style.display = "none";
-        document.getElementById("costos").style.display = "block";
-        document.getElementById("back").style.display = "block";
-        document.getElementById("side").style.display = "none";
-        document.getElementById("informacion").style.display = "none";
-        document.getElementById("planes").style.display = "none";
-        document.getElementById("comofunciona").style.display = "none";
-        conta=0;
-        contador=2;
-        
-        
-    }
-
-    function comofunciona() {
-        document.getElementById("portafolio").style.display = "none";
-        document.getElementById("comofunciona").style.display = "block";
-        document.getElementById("side").style.display = "none";
-        document.getElementById("informacion").style.display = "none";
-        document.getElementById("back").style.display = "block";
-        document.getElementById("costos").style.display = "none";
-        document.getElementById("planes").style.display = "none";
-        conta=0;
-        contador=2;
-        
-        
-    }
-
-    function planes() {
-        document.getElementById("planes").style.display = "block";
-        document.getElementById("portafolio").style.display = "none";
-        document.getElementById("side").style.display = "none";
-        document.getElementById("informacion").style.display = "none";
-        document.getElementById("back").style.display = "block";
-        document.getElementById("comofunciona").style.display = "none";
-        document.getElementById("costos").style.display = "none";
-        conta=0;
-        contador=3;
-        
-        
-    }
+   //    menu laterl 
 
     var btns = document.getElementById("inicio"),
     informacion = document.getElementById("infomacion"),
@@ -139,7 +125,7 @@ function back() {
             
         }
 
-
+// llevar arriba
        
         document.querySelector('.tarjeta')  
         .addEventListener('click',()=>{
@@ -149,6 +135,38 @@ function back() {
         });
         });
 
+
+        document.querySelector('.side1')   
+        .addEventListener('click',()=>{
+         window.scrollTo({
+         top: 0,
+         behavior: 'smooth'
+        });
+        });
+
+        document.querySelector('.side2')   
+        .addEventListener('click',()=>{
+         window.scrollTo({
+         top: 0,
+         behavior: 'smooth'
+        });
+        });
+
+        document.querySelector('.side3')   
+        .addEventListener('click',()=>{
+         window.scrollTo({
+         top: 0,
+         behavior: 'smooth'
+        });
+        });
+
+        document.querySelector('.back')   
+        .addEventListener('click',()=>{
+         window.scrollTo({
+         top: 0,
+         behavior: 'smooth'
+        });
+        });
       
 
         
