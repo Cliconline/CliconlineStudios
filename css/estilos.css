@@ -94,21 +94,8 @@ lottie-player {
 	position: fixed;
 	margin: 10px 0px;
 	box-shadow: 1px 1px 5px #ffffffc4;
-	animation: popup 0.50s ease-in-out;
-
 }
 
-@keyframes popup {
-	0% {
-		width: 0%;
-		height: 1%;
-	}
-	
-	100%{
-		width: 40%;
-		height:  26%;
-	}
-}
 
 .side a{
 	color: #f7f7f7f1;
