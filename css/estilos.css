@@ -29,9 +29,10 @@ lottie-player {
 .tarjeta {
 	margin: 5px 0;
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.377);
+	background-color: rgba(255, 255, 255, 0.295);
 	backdrop-filter: blur(2px);
 	border: solid 1px rgb(255, 255, 255, 05);
+	box-shadow: 1px 1px 5px #ffffffc4;
 	border-radius: 15px;
 	overflow: hidden;
 	z-index: 1000;	
@@ -86,7 +87,7 @@ lottie-player {
 
 .side {
 	width: 40%;
-	background-color: rgba(22, 1, 1, 0.3);
+	background-color: rgba(22, 1, 1, 0.541);
 	backdrop-filter: blur(10px);
 	border: solid 1px rgb(255, 255, 255, 0.5);
 	border-radius: 10px;
@@ -105,6 +106,7 @@ lottie-player {
 	display: block;
 	background: none;
 	padding: 3px 10px;
+	margin: 7px 0px;
 }
 
 .side a:hover {
@@ -321,7 +323,7 @@ lottie-player {
 
 .redes-sociales .whatsapp { background: #25D366; }
 .redes-sociales .facebook { background: #3b5998; }
-.redes-sociales .phone { background: #55acee; }
+.redes-sociales .phone { background: #0d8bec; }
 .redes-sociales .instagram { background: #C13584; }
 
 

@@ -96,6 +96,7 @@ function back() {
         document.getElementById("informacion").style.display = "none";
         document.getElementById("back").style.display = "block";
         document.getElementById("costos").style.display = "none";
+        document.getElementById("planes").style.display = "none";
         conta=0;
         contador=2;
         
