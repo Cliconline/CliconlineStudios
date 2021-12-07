@@ -98,10 +98,9 @@ function back() {
     }
     
     
-    }
+    }  
 
-
-   //    menu laterl 
+             //    menu laterl 
 
     var btns = document.getElementById("inicio"),
     informacion = document.getElementById("infomacion"),
@@ -123,55 +122,63 @@ function back() {
             document.getElementById("side").style.display = "none";
             conta=0;
             
-        }
-
+        }     
 // llevar arriba
        
-        document.querySelector('.tarjeta')  
-        .addEventListener('click',()=>{
-         window.scrollTo({
-         top: 0,
-         behavior: 'smooth'
-        });
-        });
+
+document.querySelector('.side')   
+.addEventListener('click',()=>{
+ window.scrollTo({
+ top: 0,
+ behavior: 'smooth'
+});
+});
+document.querySelector('.portafolio')   
+.addEventListener('click',()=>{
+ window.scrollTo({
+ top: 0,
+ behavior: 'smooth'
+});
+});
 
 
-        document.querySelector('.side1')   
-        .addEventListener('click',()=>{
-         window.scrollTo({
-         top: 0,
-         behavior: 'smooth'
-        });
-        });
+document.querySelector('.costos')   
+.addEventListener('click',()=>{
+ window.scrollTo({
+ top: 0,
+ behavior: 'smooth'
+});
+});
 
-        document.querySelector('.side2')   
-        .addEventListener('click',()=>{
-         window.scrollTo({
-         top: 0,
-         behavior: 'smooth'
-        });
-        });
+document.querySelector('.side1')   
+.addEventListener('click',()=>{
+ window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
 
-        document.querySelector('.side3')   
-        .addEventListener('click',()=>{
-         window.scrollTo({
-         top: 0,
-         behavior: 'smooth'
-        });
-        });
+document.querySelector('.side2')   
+.addEventListener('click',()=>{
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
 
-        document.querySelector('.back')   
-        .addEventListener('click',()=>{
-         window.scrollTo({
-         top: 0,
-         behavior: 'smooth'
-        });
-        });
-      
+document.querySelector('.side3')   
+.addEventListener('click',()=>{
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+ });
 
-        
-        
-
-
-
+document.querySelector('.back')   
+.addEventListener('click',()=>{
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});    
 
