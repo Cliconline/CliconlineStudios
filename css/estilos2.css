@@ -156,6 +156,7 @@ lottie-player {
 	padding: 5px;
 }
 
+
 .informacion .caja1 {
 
   margin: auto;
@@ -165,19 +166,24 @@ lottie-player {
 
 }
 
-.informacion .caja1 figure p {
-	font-size: 10px;
-}
-
-
 .informacion .caja1 figure img {
 	width: 70%;
 	border-radius: 5%;
+	background-color: rgba(255, 255, 255, 0.11);
+	backdrop-filter: blur(2px);
+	border: solid 1px rgb(255, 255, 255, 05);
+	box-shadow: 1px 1px 7px #160000c4;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .informacion .caja1 figure a {
 	text-align: center;
 	align-items: center;
+}
+
+.informacion .caja1 figure img:hover {
+	background: #59a6ff63;
 }
 
 .boton2 {
@@ -379,7 +385,7 @@ footer {
   }
   
   .material-icons:hover {
-	  background-color: rgb(27, 118, 255);
+	  background-color: #1b76ff;
   }
 
   .material-back {
@@ -423,7 +429,7 @@ footer {
 
 
   .materialpago:hover{
-	  background: rgba(144, 194, 44, 0.753);
+	  background: #1b76ff;
 	  color: #fff;
   }
 

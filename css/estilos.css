@@ -217,18 +217,25 @@ lottie-player {
 	position: absolute;
 	text-decoration: none;
 	color: #fff;
-	top: 50px;
+	top: 52px;
 	right: 10px;	
 }
 
 .pago {
 	position: absolute;
 	text-decoration: none;
-	color: rgb(115, 255, 0);
+	color: rgb(255, 255, 255);
 	top: 95px;
 	right: 10px;	
 }
 
+.network {
+	position: absolute;
+	text-decoration: none;
+	color: rgb(43, 255, 0);
+	top: 138px;
+	right: 10px;	
+}
 
 .boton {
 	background: linear-gradient(102deg, #0998f7 40%, #1619d4 60%);
@@ -359,15 +366,15 @@ footer {
 	}
 }
 
-@media screen  and  (min-width: 1200px){
-  .descarga, .pago { 
+@media screen  and  (min-width: 1100px){
+  .descarga, .pago{ 
 	display: none;
 	}
 }
 
-@media screen  and  (min-width: 1200px){
-	.descarga, .pago { 
-	  display: none;
+@media screen  and  (min-width: 1100px){
+	.network { 
+		top: 52px;
 	  }
   }
 
@@ -464,7 +471,7 @@ footer {
 
 
   .materialpago:hover{
-	  background: rgba(144, 194, 44, 0.753);
+	  background:  rgb(27, 118, 255);
 	  color: #fff;
   }
 
