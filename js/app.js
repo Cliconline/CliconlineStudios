@@ -2,7 +2,7 @@ particlesJS(
   {
     "particles": {
       "number": {
-        "value": 86,
+        "value": 95,
         "density": {
           "enable": true,
           "value_area": 800
@@ -14,8 +14,8 @@ particlesJS(
       "shape": {
         "type": "circle",
         "stroke": {
-          "width": 0,
-          "color": "#000000"
+          "width": 1,
+          "color": "#00a4ff"
         },
         "polygon": {
           "nb_sides": 5
@@ -28,7 +28,7 @@ particlesJS(
       },
       "opacity": {
         "value": 0.5,
-        "random": true,
+        "random": false,
         "anim": {
           "enable": false,
           "speed": 1,
@@ -37,7 +37,7 @@ particlesJS(
         }
       },
       "size": {
-        "value": 10,
+        "value": 3,
         "random": true,
         "anim": {
           "enable": false,
@@ -47,16 +47,16 @@ particlesJS(
         }
       },
       "line_linked": {
-        "enable": false,
-        "distance": 500,
+        "enable": true,
+        "distance": 150,
         "color": "#ffffff",
         "opacity": 0.4,
-        "width": 2
+        "width": 1
       },
       "move": {
         "enable": true,
         "speed": 6,
-        "direction": "bottom",
+        "direction": "none",
         "random": false,
         "straight": false,
         "out_mode": "out",
@@ -72,12 +72,12 @@ particlesJS(
       "detect_on": "canvas",
       "events": {
         "onhover": {
-          "enable": true,
-          "mode": "bubble"
+          "enable": false,
+          "mode": "repulse"
         },
         "onclick": {
-          "enable": true,
-          "mode": "repulse"
+          "enable": false,
+          "mode": "push"
         },
         "resize": true
       },
@@ -85,14 +85,14 @@ particlesJS(
         "grab": {
           "distance": 400,
           "line_linked": {
-            "opacity": 0.5
+            "opacity": 1
           }
         },
         "bubble": {
           "distance": 400,
-          "size": 4,
-          "duration": 0.3,
-          "opacity": 1,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
           "speed": 3
         },
         "repulse": {

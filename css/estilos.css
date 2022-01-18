@@ -7,7 +7,7 @@
 }
 
 body {
-	background: url('../img/finn.jpg');
+	background: url('../img/fondomundo.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-family:'Open Sans',Sans-serif, Arial, Helvetica;
@@ -38,10 +38,10 @@ lottie-player {
 .tarjeta {
 	margin: 5px 0;
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.507);
+	background-color: rgba(255, 255, 255, 0.418);
 	backdrop-filter: blur(2px);
 	border: solid 1px rgb(255, 255, 255, 05);
-	box-shadow: 1px 1px 5px #ffffffc4;
+	box-shadow: 1px 1px 5px #ffffffee;
 	border-radius: 15px;
 	overflow: hidden;
 	z-index: 1000;	
@@ -128,13 +128,13 @@ lottie-player {
 		
 	}
 	25%, 45% {
-		background-image: url(../img/banner2.jpg);
+		background-image: url(../img/fondocode.jpg);
 	}
 	50%, 70% {
-		background-image: url(../img/banner3.jpg);
+		background-image: url(../img/fondom.jpg);
 	}
 	75%, 100% {
-		background-image: url(../img/banner4.jpg);
+		background-image: url(../img/banner4.png);
 	}
 }
 
@@ -360,11 +360,18 @@ footer {
 
 @media screen  and  (min-width: 800px){
 	body { 
-		background: url('../img/fondo2.jpg');
+		background: url('../img/fondomundo.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
 }
+
+@media screen  and  (min-width: 800px){
+	.tarjeta { 
+		background-color: #ffffffc5;
+	}
+}
+
 
 @media screen  and  (min-width: 1100px){
   .descarga, .pago{ 
