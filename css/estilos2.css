@@ -19,14 +19,6 @@ lottie-player {
 	vertical-align: top;
 }
 
-#particles-js {
-	height: 100vh; 
-	width: 100%;
-    position: fixed;
-    z-index: -1;
-}
-
-
 .contenedor {
 	width: 95%;
 	max-width: 700px;
@@ -38,7 +30,7 @@ lottie-player {
 .tarjeta {
 	margin: 5px 0;
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.418);
+	background-color: rgba(255, 255, 255, 0.527);
 	backdrop-filter: blur(2px);
 	border: solid 1px rgb(255, 255, 255, 05);
 	box-shadow: 1px 1px 5px #ffffffc4;
@@ -138,111 +130,7 @@ lottie-player {
 	}
 }
 
-/* ----- ----- inicio informacion ----- ----- */
-.informacion {
-	text-align: center;
 
-
-}
-
-
-.informacion img {
-	width: 10%;
-}
-
-.informacion .titulo  {
-	align-items:center;
-	font-size: 18px;
-	padding: 5px;
-}
-
-
-.informacion .caja1 {
-
-  margin: auto;
-  display: flex;
-  text-align: center;
-  align-items: center;
-
-}
-
-.informacion .caja1 figure img {
-	width: 70%;
-	border-radius: 5%;
-	background-color: rgba(255, 255, 255, 0.11);
-	backdrop-filter: blur(2px);
-	border: solid 1px rgb(255, 255, 255, 05);
-	box-shadow: 1px 1px 7px #160000c4;
-	border-radius: 10px;
-	overflow: hidden;
-}
-
-.informacion .caja1 figure a {
-	text-align: center;
-	align-items: center;
-}
-
-.informacion .caja1 figure img:hover {
-	background: #59a6ff63;
-}
-
-.boton2 {
-	background: linear-gradient(102deg, #0099ff 40%, #0099ffd2 60%);
-	color: #fffffff1;
-	font-size: 12px;
-	text-align: center;
-	text-decoration: none;
-	display: flex;
-	padding: 8px 18%;
-	border-radius: 10px;
-	box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
-	display: inline-block;
-	
-}
-
-.boton2:hover {
-	background: linear-gradient(102deg, #0099ffa8 40%, #0099ff85 60%);
-	color: #ffffff;
-}
-
-.back {
-	position: fixed;
-	z-index: 1200;
-	color: #ffffff;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 10px;
-	box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
-	right: 16px;
-	bottom: 10px;
-	animation: pulse 1.7s ;	
-}
-
-.back:hover {
-	background: linear-gradient(102deg, #0099ffc7 40%, #0099ffc7 60%);
- }
-
-.botoninicio {
-	position: absolute;
-	background: linear-gradient(102deg, #0099ffc7 40%, #0099ffc7 60%);
-	color: #ffffff;
-	font-size: 30px;
-	text-align: center;
-	text-decoration: none;
-	padding: 6px 3%;
-	border-radius: 10px;
-	box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
-	left: 1px;
-	bottom: 1px;
-	margin: 10px 8px;
-	display: none;
-	animation: pulse 1.7s ;	
-}
-
-
-.botoninicio:hover{
-	background:  #0998f7;
-}
 .share {
 	position: absolute;
 	text-decoration: none;
@@ -285,9 +173,89 @@ lottie-player {
 	}
 	
 }
+/* ----- ----- negocios ----- ----- */
+
+.titulo{
+	text-align: center;
+}
+
+.titulo img {
+	width: 9%;
+}
 
 
+/* ----- ----- negocios ----- ----- */
 
+.negocios{	
+	display: grid;
+	text-align: center;
+	padding: 0px 10px;
+	grid-gap: 8px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas: "producto1 producto2 producto3"
+	                     "producto4 producto5 producto6"
+	                     "tituloab2 tituloab2 tituloab2"
+						 "producto7 producto8 producto9"
+						"producto10 producto11 producto12";
+
+	
+}
+
+.negocios img {
+	width: 70%;
+
+}
+
+.negocios >div:hover{
+	background: #ffffff;
+}
+
+
+.negocios >div{
+	border: solid 1px hsla(214, 97%, 45%, 0.769);
+	border-radius: 5%;
+}
+.negocios .btc {
+	background: linear-gradient(102deg, #0099ff 40%, #0099ffd2 60%);
+	color: #fffffff1;
+	font-size: 10px;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px 20px;
+	border-radius: 10px;
+	display: inline-block;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, .5)	
+	
+}
+
+.negocios .btc:hover{
+	background: linear-gradient(102deg, #fbfcfd 40%, #ffffffd2 60%);
+	color: #186db3f1;
+	border: solid 1px hsla(214, 97%, 45%, 0.769);
+	box-shadow: 1px 1px 5px #114694c4;
+}
+
+.negocios .n1 {
+	grid-area: producto1;
+}
+
+.negocios .n2 {
+	grid-area: producto2;
+}
+
+@media screen  and  (max-width: 768px){
+	
+	.negocios {
+		
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: "producto1 producto2"
+							 "producto3 producto4"
+							"producto5 producto6"
+							"producto7 producto8"
+							"producto9 producto10";}								
+	
+	}
 
 /* ----- ----- Redes Sociales ----- ----- */
 
@@ -337,6 +305,8 @@ footer {
 		background: url('../img/fondomundo.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
+		
+	
 	}
 }
 
