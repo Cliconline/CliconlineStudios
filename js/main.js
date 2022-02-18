@@ -122,33 +122,18 @@ function back() {
             document.getElementById("side").style.display = "none";
             conta=0;
             
-        }     
+        }    
+        
+        // llevar cerrar side automatico
+
+document.querySelector('.tarjeta').addEventListener('click',()=>{
+    document.getElementById("side").style.display = "none";
+    conta=0;
+    });
+        
+
 // llevar arriba
        
-
-document.querySelector('.side')   
-.addEventListener('click',()=>{
- window.scrollTo({
- top: 0,
- behavior: 'smooth'
-});
-});
-document.querySelector('.portafolio')   
-.addEventListener('click',()=>{
- window.scrollTo({
- top: 0,
- behavior: 'smooth'
-});
-});
-
-
-document.querySelector('.costos')   
-.addEventListener('click',()=>{
- window.scrollTo({
- top: 0,
- behavior: 'smooth'
-});
-});
 
 document.querySelector('.side1')   
 .addEventListener('click',()=>{
@@ -166,13 +151,22 @@ behavior: 'smooth'
 });
 });
 
+
 document.querySelector('.side3')   
 .addEventListener('click',()=>{
 window.scrollTo({
 top: 0,
 behavior: 'smooth'
 });
- });
+});
+
+document.querySelector('.portafolio')   
+.addEventListener('click',()=>{
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
 
 document.querySelector('.back')   
 .addEventListener('click',()=>{
