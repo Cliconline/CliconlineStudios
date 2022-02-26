@@ -302,12 +302,13 @@ lottie-player {
 }
 
 /* ----- ----- portafolios ----- ----- */
+
 .portafolio {
 	text-align: center;
 	display: none;
 }
 .portafolio .cata1 img {
-	width: 40%;
+	width: 65%;
 }
 .portafolio .texto1 {
 	text-align: center;
@@ -334,6 +335,60 @@ lottie-player {
 	
 }
 
+.container-slider {
+	width: 100%;
+    max-width: 900px;
+	overflow: hidden;
+	position: relative;			
+
+}
+
+.slider {
+	display: flex;
+	width: 300%;
+	margin-left: -100%;
+}
+
+
+.slider__section{
+	width: 50%;
+}
+
+.slider__img {
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 10px 10%;
+	object-fit: cover;
+}
+.slider__btn {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: rgba(255, 255, 255, 0.7);
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 15px;
+	font-weight: bold;
+	font-family: monospace;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+
+
+.slider__btn:hover{
+	background: #fff;
+}
+
+.slider__btn--left{
+	left: 10px;
+}
+
+.slider__btn--rigth{
+	right: 10px;
+}
 
 /* ----- ----- Redes Sociales ----- ----- */
 
@@ -377,6 +432,9 @@ footer {
 	font-size: 14px;
 }
 
+footer .rango {
+	font-size: 10px;
+}
 
 @media screen  and  (min-width: 800px){
 	body { 
@@ -408,6 +466,13 @@ footer {
 @media screen  and  (min-width: 1400px){
 	.sidebar { 
 	  left: 27%;
+	  }
+  }
+
+@media screen  and  (min-width: 600px){
+	.slider img{ 
+		height: 300px;
+		padding: 10px 20%;
 	  }
   }
 
@@ -511,8 +576,10 @@ footer {
 }
 
 .costos img {
-	width: 25%;
+	width: 30%;
 	vertical-align: top;
+	padding: 10px 2%;
+	
 }
 
 .costos p {
