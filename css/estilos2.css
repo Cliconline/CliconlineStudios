@@ -207,6 +207,12 @@ lottie-player {
 
 }
 
+.negocios .pailas {
+	width: 60%;
+	margin: 15px;
+
+}
+
 .negocios >div:hover{
 	background: #ffffff;
 }

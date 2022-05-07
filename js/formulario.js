@@ -14,21 +14,19 @@ document.querySelector("#submit").addEventListener("click", e => {
     resp.classList.remove("fail");
     resp.classList.remove("send");
   
-    let url = `https://api.whatsapp.com/send?phone=593998968077&text=
+    let url = `https://api.whatsapp.com/send?phone=593959907464&text=
           *CliconlineStudios*%0A
-          *Datos de la Compra*%0A
+          *Datos de la Cotización*%0A
           *Nombre*%0A
           ${cliente}%0A
           *Número de Contacto*%0A
           ${edad}%0A
-          *Fecha de la comprar*%0A
+          *Fecha*%0A
           ${fecha}%0A
-          *Tipo de Compra*%0A
+          *Cotiza*%0A
           ${modulos}%0A
           *Cantidad*%0A
-          ${Cantidad}%0A
-          *Paga con Transferencia en Banco Pichicha en el siguiente enlace ⬇️*%0A
-          ${cuenta}%0A`;
+          ${Cantidad}%0A`;
           
 
   
@@ -41,7 +39,7 @@ document.querySelector("#submit").addEventListener("click", e => {
     resp.classList.add("send");
     resp.classList.remove("pagok");
     resp.classList.add("pagook");
-    resp.innerHTML = `Tu Reserva Fue Enviada, ${cliente}`;
+    resp.innerHTML = `Tu Cotización se Envio, ${cliente}`;
   
     window.open(url);
   });

@@ -7,6 +7,7 @@ function inicio() {
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("planes").style.display = "none";
     document.getElementById("side").style.display = "none";
+    document.getElementById("screen4").style.display = "none";
     conta=0;
     contador=0;
 }
@@ -21,7 +22,6 @@ var btn = document.getElementById("inicio"),
 
 function servicios() {
 
-if (contador==0) {
     document.getElementById("informacion").style.display = "none";
     document.getElementById("portafolio").style.display = "block";
     document.getElementById("back").style.display = "block";
@@ -29,10 +29,7 @@ if (contador==0) {
     conta=0;
     contador=1;
 }
-else{
 
-}
-}
 
 function categorias() {
     document.getElementById("informacion").style.display = "none";	
@@ -43,6 +40,7 @@ function categorias() {
     document.getElementById("informacion").style.display = "none";
     document.getElementById("planes").style.display = "none";
     document.getElementById("comofunciona").style.display = "none";
+    document.getElementById("screen4").style.display = "none";
     conta=0;
     contador=2;
     window.scrollTo({
@@ -61,6 +59,7 @@ function comofunciona() {
     document.getElementById("back").style.display = "block";
     document.getElementById("costos").style.display = "none";
     document.getElementById("planes").style.display = "none";
+    document.getElementById("screen4").style.display = "none";
     conta=0;
     contador=2;
     window.scrollTo({
@@ -79,8 +78,26 @@ function planes() {
     document.getElementById("back").style.display = "block";
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("costos").style.display = "none";
+    document.getElementById("screen4").style.display = "none";
     conta=0;
     contador=3;
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        });     
+}
+
+function cotizar() {
+    document.getElementById("screen4").style.display = "block";
+    document.getElementById("planes").style.display = "none";
+    document.getElementById("portafolio").style.display = "none";
+    document.getElementById("side").style.display = "none";
+    document.getElementById("informacion").style.display = "none";
+    document.getElementById("back").style.display = "block";
+    document.getElementById("comofunciona").style.display = "none";
+    document.getElementById("costos").style.display = "none";
+    conta=0;
+    contador=2;
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
@@ -105,12 +122,14 @@ function back() {
         document.getElementById("costos").style.display = "none";
         document.getElementById("comofunciona").style.display = "none";
         document.getElementById("planes").style.display = "none";
+        document.getElementById("screen4").style.display = "none";
         contador=1;
 
     }
     
     
     }  
+
 
              //    menu laterl 
 
@@ -229,4 +248,52 @@ top: 0,
 behavior: 'smooth'
 });
 });    
+
+
+document.querySelector("#submit").addEventListener("click", e => {
+    e.preventDefault();
+  
+    //INGRESE UN NUMEROS DE WHATSAPP VALIDOS AQUI:
+    let cuenta = "https://deuna.onelink.me/H92p/bc99d0ae?token=7C1F07A144AD1CAB9C6119376B289266830AB021";
+  
+    let cliente = document.querySelector("#cliente").value;
+    let edad = document.querySelector("#edad").value;
+    let fecha = document.querySelector("#fecha").value;
+    let modulos = document.querySelector("#modulos").value;
+    let Cantidad = document.querySelector("#modulos2").value;
+    let resp = document.querySelector("#respuesta");
+  
+    resp.classList.remove("fail");
+    resp.classList.remove("send");
+  
+    let url = `https://api.whatsapp.com/send?phone=593998968077&text=
+          *CliconlineStudios*%0A
+          *Datos de la Cotización*%0A
+          *Nombre*%0A
+          ${cliente}%0A
+          *Número de Contacto*%0A
+          ${edad}%0A
+          *Fecha de la comprar*%0A
+          ${fecha}%0A
+          *Cotiza*%0A
+          ${modulos}%0A
+          *Cantidad*%0A
+          ${Cantidad}%0A`;
+          
+
+  
+    if (cliente === "" || edad === "" || fecha === "" ) {
+      resp.classList.add("fail");
+      resp.innerHTML = `Espera, ${cliente} faltan algunos Datos `;
+      return false;
+    }
+    resp.classList.remove("fail");
+    resp.classList.add("send");
+    resp.classList.remove("pagok");
+    resp.classList.add("pagook");
+    resp.innerHTML = `Tu Cotización se Envio, ${cliente}`;
+  
+    window.open(url);
+  });
+
 
