@@ -8,6 +8,8 @@ function inicio() {
     document.getElementById("planes").style.display = "none";
     document.getElementById("side").style.display = "none";
     document.getElementById("screen4").style.display = "none";
+    ids = 1;
+    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
     conta=0;
     contador=0;
 }
@@ -19,6 +21,7 @@ var btn = document.getElementById("inicio"),
     informacion = document.getElementById("infomacion"),
     contador=0;
 
+    let ids = 0;
 
 function servicios() {
 
@@ -26,9 +29,49 @@ function servicios() {
     document.getElementById("portafolio").style.display = "block";
     document.getElementById("back").style.display = "block";
     document.getElementById("side").style.display = "none";
+    ids = 1;
+    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
     conta=0;
     contador=1;
 }
+
+window.addEventListener('popstate', e => {
+    backweb();
+});
+
+
+function backweb() {
+   
+    if (ids==1) {
+        document.getElementById("informacion").style.display = "block";
+        document.getElementById("portafolio").style.display = "none";
+        document.getElementById("back").style.display = "none";
+        document.getElementById("side").style.display = "none";
+        history.replaceState({ids: null}, 'Default state', './');
+        conta=0;
+        contador=0;
+
+    } else if (ids==2) {
+        document.getElementById("portafolio").style.display = "block";
+        document.getElementById("costos").style.display = "none";
+        document.getElementById("comofunciona").style.display = "none";
+        document.getElementById("planes").style.display = "none";
+        document.getElementById("screen4").style.display = "none";
+        ids = 1;
+        contador=1;
+
+    }
+    else{
+        document.getElementById("portafolio").style.display = "block";
+        document.getElementById("costos").style.display = "none";
+        document.getElementById("comofunciona").style.display = "none";
+        document.getElementById("planes").style.display = "none";
+        document.getElementById("screen4").style.display = "none";
+        contador=1;
+
+    }
+    
+    } 
 
 
 function categorias() {
@@ -41,6 +84,8 @@ function categorias() {
     document.getElementById("planes").style.display = "none";
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("screen4").style.display = "none";
+    ids = 2;
+    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
     conta=0;
     contador=2;
     window.scrollTo({
@@ -60,6 +105,8 @@ function comofunciona() {
     document.getElementById("costos").style.display = "none";
     document.getElementById("planes").style.display = "none";
     document.getElementById("screen4").style.display = "none";
+    ids = 2;
+    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
     conta=0;
     contador=2;
     window.scrollTo({
@@ -79,6 +126,8 @@ function planes() {
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("costos").style.display = "none";
     document.getElementById("screen4").style.display = "none";
+    ids = 2;
+    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
     conta=0;
     contador=3;
     window.scrollTo({
@@ -96,6 +145,8 @@ function cotizar() {
     document.getElementById("back").style.display = "block";
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("costos").style.display = "none";
+    ids = 2;
+    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
     conta=0;
     contador=2;
     window.scrollTo({
@@ -107,12 +158,13 @@ function cotizar() {
 //   boton atras
 
 function back() {
-
+    
     if (contador==1) {
         document.getElementById("informacion").style.display = "block";
         document.getElementById("portafolio").style.display = "none";
         document.getElementById("back").style.display = "none";
         document.getElementById("side").style.display = "none";
+        history.replaceState({ids: null}, 'Default state', './');
         conta=0;
         contador=0;
 
@@ -123,6 +175,8 @@ function back() {
         document.getElementById("comofunciona").style.display = "none";
         document.getElementById("planes").style.display = "none";
         document.getElementById("screen4").style.display = "none";
+        ids = 1;
+        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
         contador=1;
 
     }
@@ -254,7 +308,7 @@ document.querySelector("#submit").addEventListener("click", e => {
     e.preventDefault();
   
     //INGRESE UN NUMEROS DE WHATSAPP VALIDOS AQUI:
-    let cuenta = "https://deuna.onelink.me/H92p/bc99d0ae?token=7C1F07A144AD1CAB9C6119376B289266830AB021";
+    let whatsapp = "998968077";
   
     let cliente = document.querySelector("#cliente").value;
     let edad = document.querySelector("#edad").value;
@@ -266,7 +320,7 @@ document.querySelector("#submit").addEventListener("click", e => {
     resp.classList.remove("fail");
     resp.classList.remove("send");
   
-    let url = `https://api.whatsapp.com/send?phone=593998968077&text=
+    let url = `https://api.whatsapp.com/send?phone=593${whatsapp}&text=
           *CliconlineStudios*%0A
           *Datos de la Cotización*%0A
           *Nombre*%0A
@@ -297,3 +351,13 @@ document.querySelector("#submit").addEventListener("click", e => {
   });
 
 
+  let boxes = Array.from(document.getElementsByClassName('box'));
+
+  function selectBox (id) {
+      boxes.forEach(b => {
+          b.classList.toggle('selected', b.id === id);
+      });
+  }
+  
+  
+  history.replaceState({id: null}, 'Default state', './');
