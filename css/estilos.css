@@ -7,11 +7,12 @@
 }
 
 body {
-	background: url('../img/fondsss.png');
+	background:linear-gradient(rgba(0, 0, 0, 0.155), rgba(255, 255, 255, 0.534)), url('../img/fondsss.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-family:'Open Sans',Sans-serif, Arial, Helvetica;
 	background-size: cover;
+
 }
 
 lottie-player {
@@ -27,6 +28,37 @@ lottie-player {
     z-index: -1;
 }
 
+@keyframes banner {
+	0%, 23% {
+		background-image: url(../img/b1.png);
+		
+	}
+	25%, 45% {
+		background-image: url(../img/fondocode.jpg);
+	}
+	50%, 70% {
+		background-image: url(../img/fondom.jpg);
+	}
+	75%, 100% {
+		background-image: url(../img/banner4.png);
+	}
+}
+
+@keyframes bannerApp {
+	0%, 23% {
+		background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnY4Yif67uAc4VF0EDamdHoYDRKlW1wYGdvAm1X54BVeHMg8uNsItUbf7U1nMkJNwPyXC0577z8rsSSPQ-i2bYSHkzs8_vq9X1Z766s3YlIXx9bHooQI8sOhw00wYWfHPaZi-mAWcOBzSKjWGWGPRgaawWA7_EEMJk_smybR0J32_5b0rX6dprxSAW/w640-h274/bannerapp.png);
+		
+	}
+	25%, 45% {
+		background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3HjaQyfVfyWYssBt5M8Uj4mD9MLDLlKojzOTPrI3VHtgmZ9kKl11Z8VhfnxwWiW1oeARhFvXl-o7OFe9iFWpmFgY2UA7rPTz-DjlLHhUoMTzf6awexunVGgOFbBEb_JwMmw2V4KQqCpFNaSe7EmwsX59j1AkmM3tINYQeK2KM8lD4dbYL20q_wly1/w640-h274/bannerapp2.png);
+	}
+	50%, 70% {
+		background-image: url(../img/fondom.jpg);
+	}
+	75%, 100% {
+		background-image: url(../img/fondocode.jpg);
+	}
+}
 
 .contenedor {
 	width: 95%;
@@ -53,6 +85,17 @@ lottie-player {
 .banner {
 	width: 100%;
 	animation: banner 8s infinite linear ;
+	background-size: 100% 100%;
+	position: static;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.banner2 {
+	width: 100%;
+	animation: bannerApp 8s infinite linear ;
 	background-size: 100% 100%;
 	position: static;
 	display: flex;
@@ -123,21 +166,7 @@ lottie-player {
 }
 
 
-@keyframes banner {
-	0%, 23% {
-		background-image: url(../img/b1.png);
-		
-	}
-	25%, 45% {
-		background-image: url(../img/fondocode.jpg);
-	}
-	50%, 70% {
-		background-image: url(../img/fondom.jpg);
-	}
-	75%, 100% {
-		background-image: url(../img/banner4.png);
-	}
-}
+
 
 /* ----- ----- inicio informacion ----- ----- */
 .informacion {
@@ -181,25 +210,26 @@ lottie-player {
 	animation: pulse2 1.7s ;	
 }
 
+.back:hover {
+	background: #00bfff;
+}
+
 @keyframes pulse2 {
 	0% {
 		transform: scale(2.99);
-		box-shadow: 0 0 0 0 rgba(9, 255, 0, 0.315);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.315);
 	}
 	70% {
 		transform: scale(1);
-		box-shadow: 0 0 0 5px rgba(12, 126, 255, 0.712);
+		box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.712);
 	}
 	100% {
 		transform: scale(.99);
-		box-shadow: 0 0 0 0 rgba(12, 15, 201, 0.548);
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.548);
 	}
 	
 }
 
-.back:hover {
-	background: linear-gradient(102deg, #0099ffc7 40%, #0099ffc7 60%);
-}
 .botoninicio {
 	position: absolute;
 	background: linear-gradient(102deg, #0099ffc7 40%, #0099ffc7 60%);
@@ -221,38 +251,6 @@ lottie-player {
 .botoninicio:hover{
 	background:  #0998f7;
 }
-.share {
-	position: absolute;
-	text-decoration: none;
-	color: #fff;
-	top: 10px;
-	right: 10px;	
-}
-
-
-.descarga {
-	position: absolute;
-	text-decoration: none;
-	color: #fff;
-	top: 52px;
-	right: 10px;	
-}
-
-.pago {
-	position: absolute;
-	text-decoration: none;
-	color: rgb(255, 255, 255);
-	top: 95px;
-	right: 10px;	
-}
-
-.network {
-	position: absolute;
-	text-decoration: none;
-	color: rgb(43, 255, 0);
-	top: 138px;
-	right: 10px;	
-}
 
 .boton {
 	background: linear-gradient(102deg, #0998f7 40%, #1619d4 60%);
@@ -269,6 +267,22 @@ lottie-player {
 	background: linear-gradient(102deg, #ffffff 40%, #e5e5fd 60%);
 	color: #0998f7;
 	
+}
+
+.botonp {
+	background:#53affff1;
+	color: #fffffff1;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+	padding: 2px 8px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px #fdfdfdec;
+}
+
+.botonp:hover {
+	color: #53affff1;
+	background:#fffffff1;
 }
 
 @keyframes pulse {
@@ -302,6 +316,46 @@ lottie-player {
 }
 
 /* ----- ----- portafolios ----- ----- */
+.App{
+	text-align: center;
+}
+
+.App .logoclick{
+	width: 10%;
+	padding: 5px 0px;
+}
+
+.App .android{
+	width: 50%;
+	padding: 11px 0px;
+}
+
+.App .android:hover{
+	width: 45%;
+	
+}
+
+@media screen  and  (min-width: 600px){
+	.App .android{ 
+		width: 25%;
+	}
+}
+.App .huawei {
+width: 45%;
+}
+
+.App .huawei:hover{
+	width: 40%;
+	
+}
+
+
+@media screen  and  (min-width: 800px){
+	.App .huawei { 
+		width: 22%;
+	}
+}
+
 
 .portafolio {
 	text-align: center;
@@ -438,11 +492,12 @@ footer .rango {
 
 @media screen  and  (min-width: 800px){
 	body { 
-		background: url('../img/fondomundo.jpg');
-		background-size: cover;
-		background-repeat: no-repeat;
+		background:linear-gradient(rgba(0, 0, 0, 0.155), rgb(255, 255, 255)), url('../img/fondomundo.png') no-repeat fixed
+		
+
 	}
 }
+
 
 @media screen  and  (min-width: 800px){
 	.tarjeta { 
@@ -478,7 +533,8 @@ footer .rango {
 
   @media screen  and  (min-width: 1400px){
 	.back { 
-	  right: 28%;
+	  right: 27%;
+	  display: block;
 	  }
   }
 
@@ -500,27 +556,7 @@ footer .rango {
 	font-weight: 400;
 	src: url(https://fonts.gstatic.com/s/materialiconsoutlined/v81/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2');
   }
-  .material-icons {
-	font-family: 'Material Icons Outlined';
-	font-weight: normal;
-	font-style: normal;
-	font-size: 25px;
-	line-height: 1;
-	letter-spacing: normal;
-	text-transform: none;
-	display: inline-block;
-	white-space: nowrap;
-	word-wrap: normal;
-	direction: ltr;
-	-webkit-font-smoothing: antialiased;
-	background: rgba(0, 0, 0, 0.562);
-	padding: 5px 4px;
-	border-radius: 10px;
-  }
-  
-  .material-icons:hover {
-	  background-color: rgb(27, 118, 255);
-  }
+
 
   .material-back {
 	font-family: 'Material Icons Outlined';
@@ -541,32 +577,6 @@ footer .rango {
 
   }
   
-
-  .materialpago {
-	font-family: 'Material Icons Outlined';
-	font-weight: normal;
-	font-style: normal;
-	font-size: 25px;
-	line-height: 1;
-	letter-spacing: normal;
-	text-transform: none;
-	display: inline-block;
-	white-space: nowrap;
-	word-wrap: normal;
-	direction: ltr;
-	-webkit-font-smoothing: antialiased;
-	background: rgba(0, 0, 0, 0.562);
-	padding: 5px 4px;
-	border-radius: 10px;
-
-  }
-
-
-  .materialpago:hover{
-	  background:  rgb(27, 118, 255);
-	  color: #fff;
-  }
-
   /* ----- ----- costos ----- ----- */
 .costos {
 	text-align: center;
@@ -744,3 +754,74 @@ footer .rango {
   #respuesta.send {
 	color: green;
   }
+
+
+    /* navegacion*/
+	.navi {
+		position: fixed;
+		z-index: 1000;
+		width: 100%;
+		height: 5%;
+		text-align: center;
+		text-decoration: none;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.418);
+		backdrop-filter: blur(2px);
+		border: solid 1px rgb(255, 255, 255, 05);
+		box-shadow: 1px 1px 5px #ffffffee;
+		border-radius: 15px;
+		overflow: hidden;
+		bottom: 1px;
+		animation: pulse2 1.7s ;
+		text-align: center;
+		justify-content: center;
+		justify-items: center;
+	
+	}
+	
+	
+	.navi ul{
+		display: flex;	
+		text-align: center;
+		justify-content: center;
+		justify-items: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	
+	.navi ul li{
+		position: relative;
+		list-style: none;
+		width: 70px;
+		height: 70px;
+		z-index: 1;
+	}
+	
+
+	.navi ul li {
+		list-style: none;
+		
+	}
+	
+	.navi ul li a {
+		text-decoration: none;
+		color: #000000;
+		font-size: 23px;
+		padding: 0px 7px;
+		
+	
+	}
+	
+
+	
+	.navi ul li a:hover{
+		color: #0d8bec;
+		font-size: 27px;
+		background: #ffffff36;
+		box-shadow: 1px 2px 5px #ffffffee;
+		border-radius: 10px;
+	}
+	
+	

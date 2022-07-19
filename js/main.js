@@ -2,16 +2,15 @@
 function inicio() {
     document.getElementById("informacion").style.display = "block";	
     document.getElementById("portafolio").style.display = "none";
-    document.getElementById("back").style.display = "none";
     document.getElementById("costos").style.display = "none";
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("planes").style.display = "none";
     document.getElementById("side").style.display = "none";
     document.getElementById("screen4").style.display = "none";
-    ids = 1;
-    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
     conta=0;
     contador=0;
+    history.replaceState({ids: null}, 'Default state', './');
+
 }
 
 
@@ -27,17 +26,26 @@ function servicios() {
 
     document.getElementById("informacion").style.display = "none";
     document.getElementById("portafolio").style.display = "block";
-    document.getElementById("back").style.display = "block";
     document.getElementById("side").style.display = "none";
-    ids = 1;
-    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
     conta=0;
     contador=1;
+    ids = 1;
+    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
+}
+
+function backarriba(){
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        });       
 }
 
 window.addEventListener('popstate', e => {
     backweb();
+    
 });
+
+let urlclick =`https://cliconline.github.io/CliconlineStudios`; 
 
 
 function backweb() {
@@ -45,11 +53,11 @@ function backweb() {
     if (ids==1) {
         document.getElementById("informacion").style.display = "block";
         document.getElementById("portafolio").style.display = "none";
-        document.getElementById("back").style.display = "none";
         document.getElementById("side").style.display = "none";
-        history.replaceState({ids: null}, 'Default state', './');
         conta=0;
         contador=0;
+        backarriba();
+        history.replaceState({ids: null}, 'Default state', './');
 
     } else if (ids==2) {
         document.getElementById("portafolio").style.display = "block";
@@ -57,41 +65,37 @@ function backweb() {
         document.getElementById("comofunciona").style.display = "none";
         document.getElementById("planes").style.display = "none";
         document.getElementById("screen4").style.display = "none";
+        backarriba();
         ids = 1;
         contador=1;
 
     }
     else{
-        document.getElementById("portafolio").style.display = "block";
-        document.getElementById("costos").style.display = "none";
-        document.getElementById("comofunciona").style.display = "none";
-        document.getElementById("planes").style.display = "none";
-        document.getElementById("screen4").style.display = "none";
-        contador=1;
+        window.open(urlclick);
 
     }
-    
+   
     } 
+
 
 
 function categorias() {
     document.getElementById("informacion").style.display = "none";	
     document.getElementById("portafolio").style.display = "none";
     document.getElementById("costos").style.display = "block";
-    document.getElementById("back").style.display = "block";
     document.getElementById("side").style.display = "none";
     document.getElementById("informacion").style.display = "none";
     document.getElementById("planes").style.display = "none";
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("screen4").style.display = "none";
-    ids = 2;
-    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
     conta=0;
     contador=2;
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
         });
+        ids = 2;
+        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
     
     
 }
@@ -101,18 +105,17 @@ function comofunciona() {
     document.getElementById("comofunciona").style.display = "block";
     document.getElementById("side").style.display = "none";
     document.getElementById("informacion").style.display = "none";
-    document.getElementById("back").style.display = "block";
     document.getElementById("costos").style.display = "none";
     document.getElementById("planes").style.display = "none";
     document.getElementById("screen4").style.display = "none";
-    ids = 2;
-    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
     conta=0;
     contador=2;
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
         });
+        ids = 2;
+        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
     
     
 }
@@ -122,18 +125,17 @@ function planes() {
     document.getElementById("portafolio").style.display = "none";
     document.getElementById("side").style.display = "none";
     document.getElementById("informacion").style.display = "none";
-    document.getElementById("back").style.display = "block";
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("costos").style.display = "none";
     document.getElementById("screen4").style.display = "none";
-    ids = 2;
-    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
     conta=0;
     contador=3;
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
-        });     
+        });  
+        ids = 2;
+        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);  
 }
 
 function cotizar() {
@@ -142,17 +144,16 @@ function cotizar() {
     document.getElementById("portafolio").style.display = "none";
     document.getElementById("side").style.display = "none";
     document.getElementById("informacion").style.display = "none";
-    document.getElementById("back").style.display = "block";
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("costos").style.display = "none";
-    ids = 2;
-    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
     conta=0;
     contador=2;
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
-        });     
+        });  
+        ids = 2;
+        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);   
 }
 
 //   boton atras
@@ -162,11 +163,11 @@ function back() {
     if (contador==1) {
         document.getElementById("informacion").style.display = "block";
         document.getElementById("portafolio").style.display = "none";
-        document.getElementById("back").style.display = "none";
+        document.getElementById("planes").style.display = "none"
         document.getElementById("side").style.display = "none";
-        history.replaceState({ids: null}, 'Default state', './');
         conta=0;
         contador=0;
+        history.replaceState({ids: null}, 'Default state', './');
 
     }
     else{
@@ -175,9 +176,10 @@ function back() {
         document.getElementById("comofunciona").style.display = "none";
         document.getElementById("planes").style.display = "none";
         document.getElementById("screen4").style.display = "none";
+        conta=0;
         ids = 1;
-        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`)
         contador=1;
+        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
 
     }
     
@@ -271,7 +273,7 @@ document.querySelector('.tarjeta').addEventListener('click',()=>{
 
 document.querySelector('.side1')   
 .addEventListener('click',()=>{
- window.scrollTo({
+window.scrollTo({
 top: 0,
 behavior: 'smooth'
 });
@@ -349,15 +351,88 @@ document.querySelector("#submit").addEventListener("click", e => {
   
     window.open(url);
   });
-
-
-  let boxes = Array.from(document.getElementsByClassName('box'));
-
-  function selectBox (id) {
-      boxes.forEach(b => {
-          b.classList.toggle('selected', b.id === id);
-      });
-  }
   
+
+      //ALERTAS>
+      function save(){
+        let url = `https://drive.google.com/u/0/uc?id=1DqW2tGa2OhflXNlJL7t5D9ryyOS5mnX0&export=download`;
+        window.open(url); 
+       };
+      
+      function ftuser() {
+          Swal.fire({
+              title: 'William Paredes',
+              text: 'Marketing Digital.',
+              imageUrl: 'img/click.png',
+              imageWidth: 100,
+              confirmButtonText: 'Añadir a Contactos',
+              showCloseButton: 'true',
+              showCancelButton: true,
+        
+          
+            }).then((result) => {
+              if (result.isConfirmed) {
+                save();
+                Swal.fire({
+                  position: 'top-end',
+                  icon: 'success',
+                  title: 'Descarga Correcta',
+                  showConfirmButton: false,
+                  timer: 1500
+                })
+              }
+            })
+      
+       
+      };
+      
+      function abrirpagos(){
+        let urla = `https://cliconlinestudios.blogspot.com/p/opciones-de-pago.html`;
+        window.open(urla); 
+       };
+
+
+       function verpagos(){
+        let urlsp = `https://cliconlinestudios.blogspot.com/p/opciones-de-pago.html`;
+        window.open(urlsp); 
+       };
+
+
+      function msjpagos() {
+        Swal.fire({
+            title: 'Opciones de Pago',
+            icon: 'info',
+            html:
+           '<a href="https://api.whatsapp.com//send?text=Enviado%20desde%20la%20App%20de%20Cliconline%20Ver%20Tarjeta%20Digital%20aqui%20https://cliconlinestudios.blogspot.com/p/opciones-de-pago.html" class="botonp" ><span class="fa fa-share-alt"></span >&nbsp;Compartir nro. Cuenta</a>',
+            showCloseButton: true,
+            showCancelButton: true,
+            confirmButtonText: 'Ver nro. Cuenta',
+          })
+          .then((result) => {
+            if (result.isConfirmed) {
+              verpagos();
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Información ',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            }
+          })
+      
+       
+      };
+      
+      function msj2() {
+        Swal.fire({
+          icon: 'info',
+          title: 'Traducir a Ingles',
+          text: 'Opción Disponible Próximamente',
+          footer: 'Tarjeta De Presentación'
+        });
+      
+       
+      };
+
   
-  history.replaceState({id: null}, 'Default state', './');

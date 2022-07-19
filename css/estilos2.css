@@ -7,7 +7,7 @@
 }
 
 body {
-	background: url('../img/fondomundo.jpg');
+	background:linear-gradient(rgba(0, 0, 0, 0.155), rgba(255, 255, 255, 0.534)), url('../img/fondsss.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-family:'Open Sans',Sans-serif, Arial, Helvetica;
@@ -308,9 +308,7 @@ footer {
 
 @media screen  and  (min-width: 800px){
 	body { 
-		background: url('../img/fondomundo.jpg');
-		background-size: cover;
-		background-repeat: no-repeat;
+		background:linear-gradient(rgba(0, 0, 0, 0.155), rgb(255, 255, 255)), url('../img/fondomundo.png') no-repeat fixed
 		
 	
 	}
@@ -431,4 +429,25 @@ footer {
 	  color: #fff;
   }
 
- 
+  .material-symbols-outlined {
+	font-family: 'Material Icons Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 25px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	background: rgba(0, 0, 0, 0.562);
+	padding: 5px 4px;
+	border-radius: 10px;
+
+  }
+
+  .material-symbols-outlined:hover {
+	background-color: rgb(27, 118, 255);
+}
