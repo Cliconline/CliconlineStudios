@@ -401,11 +401,12 @@ document.querySelector("#submit").addEventListener("click", e => {
       function msjpagos() {
         Swal.fire({
             title: 'Opciones de Pago',
-            icon: 'info',
+            icon: 'success',
             html:
            '<a href="https://api.whatsapp.com//send?text=Enviado%20desde%20la%20App%20de%20Cliconline%20Ver%20Tarjeta%20Digital%20aqui%20https://cliconlinestudios.blogspot.com/p/opciones-de-pago.html" class="botonp" ><span class="fa fa-share-alt"></span >&nbsp;Compartir nro. Cuenta</a>',
             showCloseButton: true,
             showCancelButton: true,
+            confirmButtonColor: '#3085d6',
             confirmButtonText: 'Ver nro. Cuenta',
           })
           .then((result) => {
