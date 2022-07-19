@@ -270,8 +270,7 @@ lottie-player {
 }
 
 .botonp {
-	background:#53affff1;
-	color: #fffffff1;
+	color: #53affff1;
 	font-size: 12px;
 	text-align: center;
 	text-decoration: none;
@@ -281,8 +280,11 @@ lottie-player {
 }
 
 .botonp:hover {
-	color: #53affff1;
+	color: #003d72f1;
 	background:#fffffff1;
+	font-size: 14px;
+	font-weight: bold;
+	
 }
 
 @keyframes pulse {
@@ -538,6 +540,7 @@ footer .rango {
 	  }
   }
 
+
 @media screen  and  (max-width: 290px){
 	.redes-sociales a { 
 		font-size: 40px;	
@@ -779,23 +782,25 @@ footer .rango {
 	
 	}
 	
-	
+	@media screen  and  (min-width: 1400px){
+		.navi { 
+			background-color: rgba(247, 246, 246, 0.826);
+		  }
+	  }
+
+
 	.navi ul{
 		display: flex;	
 		text-align: center;
 		justify-content: center;
 		justify-items: center;
-		position: absolute;
-		top: 0;
-		left: 0;
+	
 	}
 	
 	
 	.navi ul li{
 		position: relative;
 		list-style: none;
-		width: 70px;
-		height: 70px;
 		z-index: 1;
 	}
 	
@@ -809,7 +814,7 @@ footer .rango {
 		text-decoration: none;
 		color: #000000;
 		font-size: 23px;
-		padding: 0px 7px;
+		padding: 0px 20px;
 		
 	
 	}
