@@ -1,4 +1,25 @@
 
+//   barrade navegacion
+
+var naviactive =function (){
+    var navi = document.getElementById("icon3");
+
+    if (navi.className == "icon3off") {
+        navi.className = "icon3active";
+     }
+     
+} 
+
+
+var navioff =function (){
+    var navi = document.getElementById("icon3");
+
+    if (navi.className == "icon3active") {
+        navi.className = "icon3off";
+     }
+     
+} 
+
 function inicio() {
     document.getElementById("informacion").style.display = "block";	
     document.getElementById("portafolio").style.display = "none";
@@ -7,6 +28,8 @@ function inicio() {
     document.getElementById("planes").style.display = "none";
     document.getElementById("side").style.display = "none";
     document.getElementById("screen4").style.display = "none";
+    document.getElementById("sharelink").style.display = "none";
+    naviactive();
     conta=0;
     contador=0;
     history.replaceState({ids: null}, 'Default state', './');
@@ -14,12 +37,10 @@ function inicio() {
 }
 
 
-
-
 var btn = document.getElementById("inicio"),
     informacion = document.getElementById("infomacion"),
     contador=0;
-
+//   variableswebatras
     let ids = 0;
 
 function servicios() {
@@ -27,6 +48,7 @@ function servicios() {
     document.getElementById("informacion").style.display = "none";
     document.getElementById("portafolio").style.display = "block";
     document.getElementById("side").style.display = "none";
+    navioff();
     conta=0;
     contador=1;
     ids = 1;
@@ -54,8 +76,10 @@ function backweb() {
         document.getElementById("informacion").style.display = "block";
         document.getElementById("portafolio").style.display = "none";
         document.getElementById("side").style.display = "none";
+        document.getElementById("sharelink").style.display = "none";
         conta=0;
         contador=0;
+        naviactive();
         backarriba();
         history.replaceState({ids: null}, 'Default state', './');
 
@@ -65,9 +89,11 @@ function backweb() {
         document.getElementById("comofunciona").style.display = "none";
         document.getElementById("planes").style.display = "none";
         document.getElementById("screen4").style.display = "none";
+        document.getElementById("sharelink").style.display = "none";
         backarriba();
-        ids = 1;
         contador=1;
+        ids = 1;
+        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
 
     }
     else{
@@ -77,7 +103,10 @@ function backweb() {
    
     } 
 
-
+function ids2 () {
+    ids = 2;
+    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
+}
 
 function categorias() {
     document.getElementById("informacion").style.display = "none";	
@@ -88,14 +117,12 @@ function categorias() {
     document.getElementById("planes").style.display = "none";
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("screen4").style.display = "none";
+    document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=2;
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-        });
-        ids = 2;
-        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
+    backarriba();
+    ids2();
+        
     
     
 }
@@ -108,15 +135,11 @@ function comofunciona() {
     document.getElementById("costos").style.display = "none";
     document.getElementById("planes").style.display = "none";
     document.getElementById("screen4").style.display = "none";
+    document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=2;
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-        });
-        ids = 2;
-        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
-    
+    backarriba();
+    ids2();  
     
 }
 
@@ -128,15 +151,34 @@ function planes() {
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("costos").style.display = "none";
     document.getElementById("screen4").style.display = "none";
+    document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=3;
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-        });  
-        ids = 2;
-        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);  
+    backarriba();
+    ids2();
 }
+
+
+function sharetj() {
+    document.getElementById("sharelink").style.display = "block";
+    document.getElementById("planes").style.display = "none";
+    document.getElementById("portafolio").style.display = "none";
+    document.getElementById("side").style.display = "none";
+    document.getElementById("informacion").style.display = "none";
+    document.getElementById("comofunciona").style.display = "none";
+    document.getElementById("costos").style.display = "none";
+    document.getElementById("screen4").style.display = "none";
+    navioff();
+    conta=0;
+    contador=1;
+    backarriba();
+    ids = 1;
+    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
+    
+       
+}
+
+
 
 function cotizar() {
     document.getElementById("screen4").style.display = "block";
@@ -146,14 +188,11 @@ function cotizar() {
     document.getElementById("informacion").style.display = "none";
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("costos").style.display = "none";
+    document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=2;
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-        });  
-        ids = 2;
-        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);   
+    backarriba();
+    ids2();
 }
 
 //   boton atras
@@ -165,6 +204,7 @@ function back() {
         document.getElementById("portafolio").style.display = "none";
         document.getElementById("planes").style.display = "none"
         document.getElementById("side").style.display = "none";
+        naviactive();
         conta=0;
         contador=0;
         history.replaceState({ids: null}, 'Default state', './');
@@ -176,6 +216,7 @@ function back() {
         document.getElementById("comofunciona").style.display = "none";
         document.getElementById("planes").style.display = "none";
         document.getElementById("screen4").style.display = "none";
+        document.getElementById("sharelink").style.display = "none";
         conta=0;
         ids = 1;
         contador=1;
@@ -427,13 +468,26 @@ document.querySelector("#submit").addEventListener("click", e => {
       
       function msj2() {
         Swal.fire({
-          icon: 'info',
-          title: 'Traducir a Ingles',
-          text: 'Opción Disponible Próximamente',
-          footer: 'Tarjeta De Presentación'
+        showCloseButton: true,
+        icon: 'success',
+        title: 'Tarjeta Digital',
+        text: 'Link Copiado a Portapapeles',
+        footer: 'CliconlineStudios'
         });
       
        
       };
 
-  
+
+
+const $content = document.getElementById('textareacopy');
+      $btncopy = document.getElementById ('btcopi');
+      $title = document.getElementById ('titlelink')
+
+      $btncopy.addEventListener('click', e => {
+        $content.select();
+        document.execCommand('copy')
+        msj2();
+        $title.innerHTML = 'Link Copiado'
+      })
+
