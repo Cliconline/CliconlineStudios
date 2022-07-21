@@ -7,7 +7,7 @@
 }
 
 body {
-	background:linear-gradient(rgba(0, 0, 0, 0.155), rgba(255, 255, 255, 0.534)), url('../img/fondsss.png');
+	background:linear-gradient(rgba(0, 0, 0, 0.155), rgba(255, 255, 255, 0.66)), url('../img/fondsss.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-family:'Open Sans',Sans-serif, Arial, Helvetica;
@@ -108,8 +108,7 @@ lottie-player {
 .portada  {
 	width: 100%;
 	vertical-align: top;
-	margin: 0%;
-	
+	margin: 0%;	
 }
 
 .sidebar{
@@ -118,9 +117,7 @@ lottie-player {
 	position: fixed;
 	z-index: 1000; 
 	padding: 10px 5px;
-	left: 12px;
-	
-		
+	left: 12px;	
 }
 
 
@@ -147,6 +144,8 @@ lottie-player {
 	position: fixed;
 	margin: 10px 0px;
 	box-shadow: 1px 1px 5px #ffffffc4;
+	
+	
 }
 
 
@@ -362,6 +361,7 @@ width: 45%;
 .portafolio {
 	text-align: center;
 	display: none;
+	
 }
 .portafolio .cata1 img {
 	width: 65%;
@@ -662,6 +662,95 @@ footer .rango {
 	
 }
 
+/* screen perfil */
+
+.sharelink {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 10px;
+	display: none;
+}
+
+.sharew{
+	text-decoration: none;
+	color: #ffffff;
+	background: #128C7E;
+	padding: 5px 30px;
+	border-radius: 10px;
+	margin: auto;
+	margin: 15px 20%;
+	display: block;	
+}
+
+.sharew:hover {
+	background: #0f9246;
+}
+
+.sharem{
+	text-decoration: none;
+	color: #ffffff;
+	background: #0687ff;
+	padding: 5px 30px;
+	border-radius: 10px;
+	margin: auto;
+	margin: 15px 20%;
+	display: block;	
+}
+
+.textareacopy{
+	width: 1px;
+	max-height: 1px;
+	background: #00020300;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	
+}
+
+.copy-text {
+
+	backdrop-filter: blur(2px);
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+
+
+	
+}
+
+.copy-text input.text {
+	padding: 4px 30px;
+	font-size: 12px;
+	color: rgb(0, 170, 255);
+	border: none;
+	outline: none;
+;
+
+}
+
+.copy-text button {
+	padding: 10px;
+	background: #0099ff;
+	color: #fff;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.copy-text button:active{
+	background: #809ce2;
+}
+
+
 /* screen 4 Formulario */
 
 .screen4 {
@@ -810,16 +899,29 @@ footer .rango {
 		
 	}
 	
-	.navi ul li a {
+	.navi ul li a{
+		padding: 0px 20px;
+		font-size: 23px;
 		text-decoration: none;
 		color: #000000;
-		font-size: 23px;
-		padding: 0px 20px;
-		
-	
 	}
-	
 
+	.navi ul li .icon3active{
+		color: #0d8bec;
+		font-size: 27px;
+		background: #ffffff36;
+		box-shadow: 1px 2px 5px #ffffffee;
+		border-radius: 10px;
+		transition: 300ms all ease;
+	}
+
+	.navi ul li .icon3off{
+		padding: 0px 20px;
+		font-size: 23px;
+		text-decoration: none;
+		color: #000000;
+		transition: 300ms all ease;
+	}
 	
 	.navi ul li a:hover{
 		color: #0d8bec;
@@ -827,6 +929,9 @@ footer .rango {
 		background: #ffffff36;
 		box-shadow: 1px 2px 5px #ffffffee;
 		border-radius: 10px;
+		transition: 300ms all ease;
+
 	}
-	
+
+
 	
