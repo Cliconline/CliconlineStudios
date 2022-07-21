@@ -41,7 +41,7 @@ var btn = document.getElementById("inicio"),
     informacion = document.getElementById("infomacion"),
     contador=0;
 //   variableswebatras
-    let ids = 0;
+    let ids = 'servicios.html';
 
 function servicios() {
 
@@ -51,7 +51,7 @@ function servicios() {
     navioff();
     conta=0;
     contador=1;
-    ids = 1;
+    ids = 'servicios.html';
     history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
 }
 
@@ -72,7 +72,7 @@ let urlclick =`https://cliconline.github.io/CliconlineStudios`;
 
 function backweb() {
    
-    if (ids==1) {
+    if (ids== "servicios.html") {
         document.getElementById("informacion").style.display = "block";
         document.getElementById("portafolio").style.display = "none";
         document.getElementById("side").style.display = "none";
@@ -83,7 +83,7 @@ function backweb() {
         backarriba();
         history.replaceState({ids: null}, 'Default state', './');
 
-    } else if (ids==2) {
+    } else if (ids=="servicios2.html") {
         document.getElementById("portafolio").style.display = "block";
         document.getElementById("costos").style.display = "none";
         document.getElementById("comofunciona").style.display = "none";
@@ -92,7 +92,7 @@ function backweb() {
         document.getElementById("sharelink").style.display = "none";
         backarriba();
         contador=1;
-        ids = 1;
+        ids = 'servicios.html';
         history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
 
     }
@@ -104,7 +104,7 @@ function backweb() {
     } 
 
 function ids2 () {
-    ids = 2;
+    ids = 'servicios2.html';
     history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
 }
 
@@ -172,7 +172,7 @@ function sharetj() {
     conta=0;
     contador=1;
     backarriba();
-    ids = 1;
+    ids = 'servicios.html';
     history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
     
        
@@ -218,7 +218,7 @@ function back() {
         document.getElementById("screen4").style.display = "none";
         document.getElementById("sharelink").style.display = "none";
         conta=0;
-        ids = 1;
+        ids = 'servicios.html';
         contador=1;
         history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
 
