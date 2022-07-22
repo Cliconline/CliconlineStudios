@@ -35,8 +35,10 @@ function inicio() {
     document.getElementById("screen4").style.display = "none";
     document.getElementById("sharelink").style.display = "none";
     naviactive();
+    ids1();
     conta=0;
     contador=0;
+    backweb();
     
 
 }
