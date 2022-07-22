@@ -20,6 +20,11 @@ var navioff =function (){
      
 } 
 
+function ids1 () {
+    ids = 'servicios.html';
+    history.pushState(`Selected: ${ids}`, `./${ids}`);
+}
+
 function inicio() {
     document.getElementById("informacion").style.display = "block";	
     document.getElementById("portafolio").style.display = "none";
@@ -51,8 +56,9 @@ function servicios() {
     navioff();
     conta=0;
     contador=1;
-    ids = 'servicios.html';
-    history.pushState(`Selected: ${ids}`, `./${ids}`);
+    ids1();
+
+   
 }
 
 function backarriba(){
@@ -81,7 +87,8 @@ function backweb() {
         contador=0;
         naviactive();
         backarriba();
-        history.replaceState= 'index.html';
+        history.back();
+   
 
     } else if (ids=="servicios2.html") {
         document.getElementById("portafolio").style.display = "block";
@@ -92,16 +99,19 @@ function backweb() {
         document.getElementById("sharelink").style.display = "none";
         backarriba();
         contador=1;
-        ids = 'servicios.html';
-        history.pushState(`Selected: ${ids}`, `./${ids}`);
+        ids1();
+       
+
 
     }
     else{
         window.open(urlclick);
+        
 
     }
-   
+
     } 
+
 
 function ids2 () {
     ids = 'servicios2.html';
@@ -172,8 +182,7 @@ function sharetj() {
     conta=0;
     contador=1;
     backarriba();
-    ids = 'servicios.html';
-    history.pushState(`Selected: ${ids}`, `./${ids}`);
+    ids1();
     
        
 }
@@ -207,6 +216,7 @@ function back() {
         naviactive();
         conta=0;
         contador=0;
+        history.back();
     
 
     }
@@ -220,7 +230,8 @@ function back() {
         conta=0;
         ids = 'servicios.html';
         contador=1;
-        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
+        ids1();
+      
 
     }
     
@@ -403,7 +414,7 @@ document.querySelector("#submit").addEventListener("click", e => {
             title: 'Opciones de Pago',
             icon: 'success',
             html:
-           '<a href="https://api.whatsapp.com//send?text=Enviado%20desde%20la%20App%20de%20Cliconline%20Ver%20Tarjeta%20Digital%20aqui%20https://cliconlinestudios.blogspot.com/p/opciones-de-pago.html" class="botonp" ><span class="fa fa-share-alt"></span >&nbsp;Compartir nro. Cuenta</a>',
+           '<a href="https://api.whatsapp.com//send?text=Enviado%20desde%20la%20App%20de%20Cliconline%20Ver%20Opciones%20de%20Pago%20https://cliconlinestudios.blogspot.com/p/opciones-de-pago.html" class="botonp" ><span class="fa fa-share-alt"></span >&nbsp;Compartir nro. Cuenta</a>',
             showCloseButton: true,
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
