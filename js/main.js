@@ -8,7 +8,7 @@ var naviactive =function (){
         navi.className = "icon3active";
      }
      
-} 
+}; 
 
 
 var navioff =function (){
@@ -18,12 +18,12 @@ var navioff =function (){
         navi.className = "icon3off";
      }
      
-} 
+}; 
 
 function ids1 () {
     ids = 'servicios.html';
     history.pushState(`Selected: ${ids}`, `./${ids}`);
-}
+};
 
 function inicio() {
     document.getElementById("informacion").style.display = "block";	
@@ -39,10 +39,21 @@ function inicio() {
     conta=0;
     contador=0;
     backweb();
-    
 
-}
+};
 
+
+
+function homeback() {
+   
+    if (contador==1) {
+        history.back();     
+    } else if (contador==2) {
+        history.back(); 
+       
+    }else {}
+
+    };
 
 var btn = document.getElementById("inicio"),
     informacion = document.getElementById("infomacion"),
@@ -61,14 +72,14 @@ function servicios() {
     ids1();
 
    
-}
+};
 
 function backarriba(){
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
         });       
-}
+};
 
 window.addEventListener('popstate', e => {
     backweb();
@@ -101,15 +112,11 @@ function backweb() {
         document.getElementById("sharelink").style.display = "none";
         backarriba();
         contador=1;
-        ids1();
-       
-
-
+        ids1();     
     }
     else{
         window.open(urlclick);
         
-
     }
 
     } 
@@ -118,7 +125,7 @@ function backweb() {
 function ids2 () {
     ids = 'servicios2.html';
     history.pushState(`Selected: ${ids}`, `./${ids}`);
-}
+};
 
 function categorias() {
     document.getElementById("informacion").style.display = "none";	
@@ -137,7 +144,7 @@ function categorias() {
         
     
     
-}
+};
 
 function comofunciona() {
     document.getElementById("portafolio").style.display = "none";
@@ -153,7 +160,7 @@ function comofunciona() {
     backarriba();
     ids2();  
     
-}
+};
 
 function planes() {
     document.getElementById("planes").style.display = "block";
@@ -168,7 +175,7 @@ function planes() {
     contador=3;
     backarriba();
     ids2();
-}
+};
 
 
 function sharetj() {
@@ -187,7 +194,7 @@ function sharetj() {
     ids1();
     
        
-}
+};
 
 
 
@@ -204,7 +211,7 @@ function cotizar() {
     contador=2;
     backarriba();
     ids2();
-}
+};
 
 //   boton atras
 
@@ -238,7 +245,7 @@ function back() {
     }
     
     
-    }  
+    }; 
 
 
              //    menu laterl 
@@ -257,13 +264,13 @@ function back() {
             document.getElementById("side").style.display = "none";
             conta=0;
         }
-        }
+        };
 
         function cerrarside() {
             document.getElementById("side").style.display = "none";
             conta=0;
             
-        }    
+        };    
         
         // llevar cerrar side automatico
 
@@ -292,7 +299,7 @@ document.querySelector('.tarjeta').addEventListener('click',()=>{
             slider.insertAdjacentElement('beforeend', sliderSectionFirst);
             slider.style.marginLeft = "-100%";
         }, 500);  
-    }
+    };
     
     function Prev (){
         let sliderSection = document.querySelectorAll(".slider__section");
@@ -304,7 +311,7 @@ document.querySelector('.tarjeta').addEventListener('click',()=>{
             slider.insertAdjacentElement('afterbegin', sliderSectionLast);
             slider.style.marginLeft = "-100%";
         }, 500);  
-    }
+    };
     
     btnRight.addEventListener('click', function(){
         next();
@@ -460,5 +467,5 @@ const $content = document.getElementById('textareacopy');
         $content.select();
         document.execCommand('copy')
         msj2();
-      })
+      });
 
