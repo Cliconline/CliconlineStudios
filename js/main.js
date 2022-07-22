@@ -32,7 +32,7 @@ function inicio() {
     naviactive();
     conta=0;
     contador=0;
-    history.replaceState({ids: null}, 'Default state', './');
+    
 
 }
 
@@ -52,7 +52,7 @@ function servicios() {
     conta=0;
     contador=1;
     ids = 'servicios.html';
-    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
+    history.pushState(`Selected: ${ids}`, `./${ids}`);
 }
 
 function backarriba(){
@@ -81,7 +81,7 @@ function backweb() {
         contador=0;
         naviactive();
         backarriba();
-        history.replaceState({ids: null}, 'Default state', './');
+        history.replaceState= 'index.html';
 
     } else if (ids=="servicios2.html") {
         document.getElementById("portafolio").style.display = "block";
@@ -93,7 +93,7 @@ function backweb() {
         backarriba();
         contador=1;
         ids = 'servicios.html';
-        history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
+        history.pushState(`Selected: ${ids}`, `./${ids}`);
 
     }
     else{
@@ -105,7 +105,7 @@ function backweb() {
 
 function ids2 () {
     ids = 'servicios2.html';
-    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
+    history.pushState(`Selected: ${ids}`, `./${ids}`);
 }
 
 function categorias() {
@@ -173,7 +173,7 @@ function sharetj() {
     contador=1;
     backarriba();
     ids = 'servicios.html';
-    history.pushState({ids}, `Selected: ${ids}`, `./selected=${ids}`);
+    history.pushState(`Selected: ${ids}`, `./${ids}`);
     
        
 }
@@ -198,7 +198,7 @@ function cotizar() {
 //   boton atras
 
 function back() {
-    
+    backarriba();
     if (contador==1) {
         document.getElementById("informacion").style.display = "block";
         document.getElementById("portafolio").style.display = "none";
@@ -207,7 +207,7 @@ function back() {
         naviactive();
         conta=0;
         contador=0;
-        history.replaceState({ids: null}, 'Default state', './');
+    
 
     }
     else{
@@ -304,47 +304,6 @@ document.querySelector('.tarjeta').addEventListener('click',()=>{
     setInterval(function(){
         next();
     },5000);
-
-
-
-
-
-// llevar arriba
-       
-
-document.querySelector('.side1')   
-.addEventListener('click',()=>{
-window.scrollTo({
-top: 0,
-behavior: 'smooth'
-});
-});
-
-document.querySelector('.side2')   
-.addEventListener('click',()=>{
-window.scrollTo({
-top: 0,
-behavior: 'smooth'
-});
-});
-
-
-document.querySelector('.side3')   
-.addEventListener('click',()=>{
-window.scrollTo({
-top: 0,
-behavior: 'smooth'
-});
-});
-
-
-document.querySelector('.back')   
-.addEventListener('click',()=>{
-window.scrollTo({
-top: 0,
-behavior: 'smooth'
-});
-});    
 
 
 document.querySelector("#submit").addEventListener("click", e => {
@@ -488,6 +447,5 @@ const $content = document.getElementById('textareacopy');
         $content.select();
         document.execCommand('copy')
         msj2();
-        $title.innerHTML = 'Link Copiado'
       })
 
