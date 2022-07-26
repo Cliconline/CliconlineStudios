@@ -96,6 +96,7 @@ function backweb() {
         document.getElementById("portafolio").style.display = "none";
         document.getElementById("planes").style.display = "none"
         document.getElementById("side").style.display = "none";
+        document.getElementById("sharelink").style.display = "none";
         naviactive();
         conta=0;
         contador=0;
@@ -218,6 +219,7 @@ function back() {
         document.getElementById("portafolio").style.display = "none";
         document.getElementById("planes").style.display = "none"
         document.getElementById("side").style.display = "none";
+        document.getElementById("sharelink").style.display = "none";
         naviactive();
         conta=0;
         contador=0;
