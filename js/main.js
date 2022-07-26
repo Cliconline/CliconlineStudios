@@ -20,10 +20,27 @@ var navioff =function (){
      
 }; 
 
+//   variableswebatras
+let ids = '';
+
 function ids1 () {
     ids = 'servicios.html';
     history.pushState(`Selected: ${ids}`, `./${ids}`);
+    pages = 'servicios.html.html';
+
 };
+
+function ids2 () {
+    ids = 'carrito.html';
+    history.pushState(`Selected: ${ids}`, `./${ids}`);
+    pages = 'carrito.html';
+
+};
+
+window.addEventListener('popstate', e => {
+    backweb();
+    
+});
 
 function inicio() {
     document.getElementById("informacion").style.display = "block";	
@@ -35,7 +52,7 @@ function inicio() {
     document.getElementById("screen4").style.display = "none";
     document.getElementById("sharelink").style.display = "none";
     naviactive();
-    ids1();
+    backarriba();
     conta=0;
     contador=0;
     backweb();
@@ -43,34 +60,23 @@ function inicio() {
 };
 
 
-
-function homeback() {
-   
-    if (contador==1) {
-        history.back();     
-    } else if (contador==2) {
-        history.back(); 
-       
-    }else {}
-
-    };
-
 var btn = document.getElementById("inicio"),
     informacion = document.getElementById("infomacion"),
     contador=0;
-//   variableswebatras
-    let ids = 'servicios.html';
 
 function servicios() {
-
     document.getElementById("informacion").style.display = "none";
     document.getElementById("portafolio").style.display = "block";
     document.getElementById("side").style.display = "none";
+    document.getElementById("costos").style.display = "none";
+    document.getElementById("comofunciona").style.display = "none";
+    document.getElementById("planes").style.display = "none";
+    document.getElementById("screen4").style.display = "none";
+    document.getElementById("sharelink").style.display = "none";
     navioff();
     conta=0;
     contador=1;
     ids1();
-
    
 };
 
@@ -81,51 +87,41 @@ function backarriba(){
         });       
 };
 
-window.addEventListener('popstate', e => {
-    backweb();
-    
-});
-
 let urlclick =`https://cliconline.github.io/CliconlineStudios`; 
 
 
 function backweb() {
-   
-    if (ids== "servicios.html") {
+    if (contador==1) {
         document.getElementById("informacion").style.display = "block";
         document.getElementById("portafolio").style.display = "none";
+        document.getElementById("planes").style.display = "none"
         document.getElementById("side").style.display = "none";
-        document.getElementById("sharelink").style.display = "none";
+        naviactive();
         conta=0;
         contador=0;
-        naviactive();
-        backarriba();
         history.back();
-   
+    
 
-    } else if (ids=="servicios2.html") {
+    }
+    else if(contador==2){
         document.getElementById("portafolio").style.display = "block";
         document.getElementById("costos").style.display = "none";
         document.getElementById("comofunciona").style.display = "none";
         document.getElementById("planes").style.display = "none";
         document.getElementById("screen4").style.display = "none";
         document.getElementById("sharelink").style.display = "none";
-        backarriba();
+        conta=0;
         contador=1;
-        ids1();     
-    }
-    else{
-        window.open(urlclick);
+        ids1();
+      
+
+    }else{
+        history.back();
         
     }
+    
 
     } 
-
-
-function ids2 () {
-    ids = 'servicios2.html';
-    history.pushState(`Selected: ${ids}`, `./${ids}`);
-};
 
 function categorias() {
     document.getElementById("informacion").style.display = "none";	
@@ -172,7 +168,7 @@ function planes() {
     document.getElementById("screen4").style.display = "none";
     document.getElementById("sharelink").style.display = "none";
     conta=0;
-    contador=3;
+    contador=2;
     backarriba();
     ids2();
 };
@@ -229,7 +225,7 @@ function back() {
     
 
     }
-    else{
+    else if(contador==2){
         document.getElementById("portafolio").style.display = "block";
         document.getElementById("costos").style.display = "none";
         document.getElementById("comofunciona").style.display = "none";
@@ -237,7 +233,6 @@ function back() {
         document.getElementById("screen4").style.display = "none";
         document.getElementById("sharelink").style.display = "none";
         conta=0;
-        ids = 'servicios.html';
         contador=1;
         ids1();
       
