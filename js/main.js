@@ -454,6 +454,18 @@ document.querySelector("#submit").addEventListener("click", e => {
        
       };
 
+      function shareok() {
+        Swal.fire({
+        icon: 'success',
+        title: 'Tarjeta Digital',
+        text: 'lista Para Compartir',
+        timer: 1500,
+        footer: 'CliconlineStudios'
+        });
+      
+       
+      };
+
 
 
 const $content = document.getElementById('textareacopy');
@@ -466,3 +478,23 @@ const $content = document.getElementById('textareacopy');
         msj2();
       });
 
+
+// nuevo share
+
+const shareData = {
+    title: 'Web Tarjeta Digital',
+    text: 'CliconlineStudios',
+    url: 'https://cliconline.github.io/CliconlineStudios'
+  }
+  
+  const btnshare = document.getElementById('sharex');
+  
+  // Share must be triggered by "user activation"
+  btnshare.addEventListener('click', async () => {
+    try {
+      await navigator.share(shareData);
+      shareok();
+    } catch (err) {
+        sharetj();
+    }
+  });
