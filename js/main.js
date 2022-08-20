@@ -487,14 +487,15 @@ const shareData = {
     url: 'https://cliconline.github.io/CliconlineStudios'
   }
   
-  const btnshare = document.getElementById('sharex');
-  
   // Share must be triggered by "user activation"
-  btnshare.addEventListener('click', async () => {
-    try {
-      await navigator.share(shareData);
-      shareok();
-    } catch (err) {
+
+  function shareplus (){
+    if (navigator.share) {
+        navigator
+       .share(shareData)
+       .then(() => console.log('correcto'))
+       .catch(error => console.log ('error sharing',error) );
+    }else {
         sharetj();
     }
-  });
+ }
