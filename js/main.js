@@ -115,13 +115,7 @@ function backweb() {
         contador=1;
         ids1();
       
-
-    }else{
-        history.back();
-        
     }
-    
-
     } 
 
 function categorias() {
