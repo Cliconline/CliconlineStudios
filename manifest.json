@@ -14,7 +14,7 @@
         }
     ],
     "start_url":"/CliconlineStudios/index.html",
-    "display": "fullscreen",
+    "display": "standalone",
     "background_color": "#FFFFFF",
     "theme_color": "#59C6F1"
 
