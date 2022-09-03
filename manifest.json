@@ -1,7 +1,7 @@
 {
     "short_name":"Cliconline",
     "name":"CliconlineStudios",
-    "start_url":"/index.html",
+    "start_url":"index.html",
     "display": "fullscreen",
     "background_color": "#FFFFFF",
     "theme_color": "#59C6F1",
