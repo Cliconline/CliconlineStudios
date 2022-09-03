@@ -1,6 +1,8 @@
 
 //   service worked
 
+navigator.serviceWorker.register("/sw.js");
+
 let promptEvent = null;
 window.addEventListener("beforeinstallprompt", (e)=>{
     instaler();
