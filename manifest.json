@@ -1,10 +1,6 @@
 {
     "short_name":"Cliconline",
     "name":"CliconlineStudios",
-    "start_url":"/CliconlineStudios/index.html",
-    "display": "fullscreen",
-    "background_color": "#FFFFFF",
-    "theme_color": "#59C6F1",
     "icons":[
         {
            "src":"assets/logo192.png",
@@ -16,7 +12,11 @@
             "sizes":"512x512",
             "type":"image/png"
         }
-    ]
+    ],
+    "start_url":"/index.html",
+    "display": "fullscreen",
+    "background_color": "#FFFFFF",
+    "theme_color": "#59C6F1"
 
 }
 
