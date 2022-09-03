@@ -2,12 +2,14 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ig=edge">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<meta property="og:title" content="Cliconline Studios"/>
+	<link rel="manifest" href="manifest.json">
 	<meta content="https://1.bp.blogspot.com/-grfBQMHbt8k/YIA8QuhjKcI/AAAAAAAAELU/YKjjMqMKdXk2w2BkYWdwlIHwuyUnSorOgCLcBGAsYHQ/w1200-h630-p-k-no-nu/CLICONLNEpt.png" property="og:image">
 	<meta property="og:image" content="https://res.cloudinary.com/cliconline/image/upload/v1615508887/CliconlineStudios/clic_ymrqgo.png"/>
 	<meta property="og:description" content="Tarjetas Digitales Para Negocios y Profesionales"/>
@@ -54,6 +56,8 @@
 		 <div class="banner" >
 		
 			<img class="portada" src="img/b11-01.png" alt="">
+
+			<a href="javascript:shareplus()" class="share" id="share" ><span class="material-icons-share">share</span></a>
 	
 		 </div>
 	 <br>
@@ -414,12 +418,17 @@
 				<span class="title"></span></a>
 			</li>
 			<li>
-				<a href="javascript:shareplus()"><span class="icon5" id="sharex"><span class="fa fa-share-alt"></span ></span>
-				<span class="title"></span></a>
+				<a href="javascript:instalx()"><span class="icon5" id="sharex"><span class="material-icons">
+					add_to_home_screen
+						</span></a>
 			</li>
 		</ul>
 	</section>
-	
+	<script>
+
+		navigator.serviceWorker.register("/sw.js");
+		
+		</script>
 	<script src="js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 			
@@ -428,6 +437,7 @@
 	   <!-- JS Particles.js -->
 	   <script src="js/particles.min.js"></script>
 	   <script src="js/app.js"></script>
+	   
 
 
 

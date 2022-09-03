@@ -194,6 +194,13 @@ lottie-player {
 .informacion p {
 	font-size: 12px;
 }
+.share {
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	top: 10px;
+	right: 10px;
+}
 
 .back {
 	position: fixed;
@@ -560,6 +567,48 @@ footer .rango {
 	src: url(https://fonts.gstatic.com/s/materialiconsoutlined/v81/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2');
   }
 
+
+  .material-icons-share {
+	font-family: 'Material Icons Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 25px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	background: rgba(0, 0, 0, 0.562);
+	padding: 5px 4px;
+	border-radius: 10px;
+  }
+  .material-icons-share:hover {
+	background-color: rgb(27, 118, 255);
+}
+
+  .material-icons {
+	font-family: 'Material Icons Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 25px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	padding: 5px 4px;
+	border-radius: 10px;
+  }
+
+  .material-icons:hover{
+	font-size: 27px;
+  }
 
   .material-back {
 	font-family: 'Material Icons Outlined';

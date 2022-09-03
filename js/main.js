@@ -1,4 +1,21 @@
 
+//   service worked
+
+let promptEvent = null;
+window.addEventListener("beforeinstallprompt", (e)=>{
+    instaler();
+    promptEvent = e;
+    
+})
+
+function instalx(e) {
+        promptEvent.prompt(e);
+       
+}
+
+
+
+
 //   barrade navegacion
 
 var naviactive =function (){
@@ -115,6 +132,7 @@ function backweb() {
         contador=1;
         ids1();
       
+
     }
     } 
 
@@ -393,8 +411,6 @@ document.querySelector("#submit").addEventListener("click", e => {
                 })
               }
             })
-      
-       
       };
       
       function abrirpagos(){
@@ -457,10 +473,19 @@ document.querySelector("#submit").addEventListener("click", e => {
         footer: 'CliconlineStudios'
         });
       
-       
       };
 
-
+      function instaler() {
+        Swal.fire({
+        icon: 'success',
+        title: 'Web Tarjeta Digital',
+        text: 'CliconlineStudios',
+        timer: 1500
+        });
+      
+      };
+     
+  
 
 const $content = document.getElementById('textareacopy');
       $btncopy = document.getElementById ('btcopi');
@@ -480,6 +505,7 @@ const shareData = {
     text: 'CliconlineStudios',
     url: 'https://cliconline.github.io/CliconlineStudios'
   }
+  
   
   // Share must be triggered by "user activation"
 
