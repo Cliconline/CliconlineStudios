@@ -5,15 +5,15 @@ navigator.serviceWorker.register("/sw.js");
 
 let promptEvent = null;
 window.addEventListener("beforeinstallprompt", (e)=>{
-    instaler();
+    console.log("listo instal")
     promptEvent = e;
     
 })
 
-function instalx(e) {
-        promptEvent.prompt(e);
-       
-}
+document.querySelector('.icon5').addEventListener('click',(e)=>{
+    promptEvent.prompt();
+    });
+
 
 
 
