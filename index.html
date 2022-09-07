@@ -57,7 +57,9 @@
 		
 			<img class="portada" src="img/b11-01.png" alt="">
 
-			<a href="javascript:shareplus()" class="share" id="share" ><span class="material-icons-share">share</span></a>
+			<a href="javascript:instaler()" class="descarga" id="descarga" ><span class="material-icons-descarga">
+				devices
+				</span></a>	
 	
 		 </div>
 	 <br>
@@ -316,41 +318,31 @@
 			Presentación, Negocio, Regalo, Invitación.
 		</p>
   <br>
-		<label for="cliente" class="formulario__label">Nombre y Apellido</label>
+		<label for="cliente" class="formulario__label">Nombre / Negocio / Servicio</label>
 		<input
 		  id="cliente"
 		  type="text"
 		  class="formulario__input"
-		  placeholder="Ingresa tu nombre"
+		  placeholder="Ingresa un nombre"
 		/>
 
-		<label for="edad" class="formulario__label">Número de Contacto</label>
-		<input
-		  id="edad"
-		  type="text"
-		  class="formulario__input"
-		  placeholder="Número celular o fijo"
-		/>
-  
-		<label for="fecha" class="formulario__label"
-		  >Fecha</label
-		>
-		<input
-		  id="fecha"
-		  type="date"
-		  class="formulario__input"
-		  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-		/>
-  
+		<label for="edad" class="formulario__label">Tipo de Tarjeta</label>
+		<select id="cardt" name="listacard" class="formulario__input">
+			<option>Negocios</option>
+			<option>Presentación</option>
+			<option>Menú Digital</option>
+			<option>Regalo</option>
+			<option>Invitación</option>
+		</select>
+
 		<label for="empleado" class="formulario__label"
-		  >Selecciona la Tarjeta </label
+		  >Categoría</label
 		>
 		<select id="modulos" name="listamodulos" class="formulario__input">
-			<option>Tarjeta de Regalo</option>
-			<option>Tarjeta de Invitación </option>
-			<option>Tarjeta Oro </option>
+			<option>Tarjeta Oro</option>
 			<option>Tarjeta Platino</option>
 			<option>Tarjeta Diamente</option>
+			<option>Tarjeta Diamente VIP</option>
 		</select>
 		
 		<label for="empleado" class="formulario__label"
@@ -364,6 +356,15 @@
 			<option>5</option>
 		  </select>
 
+		  <label for="fecha" class="formulario__label"
+		  >Fecha</label
+		>
+		<input
+		  id="fecha"
+		  type="date"
+		  class="formulario__input"
+		  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+		/>
 
 		<button id="submit" class="formulario__submit">Enviar a Cotizar</button>
 
@@ -418,9 +419,8 @@
 				<span class="title"></span></a>
 			</li>
 			<li>
-				<a href="#"><span class="icon5" id="sharex"><span class="material-icons">
-					add_to_home_screen
-						</span></a>
+				<a href="javascript:shareplus()"><span class="icon5" id="icon5"><span class="fa fa-share-alt"></span ></span>
+					<span class="title"></span></a>
 			</li>
 		</ul>
 	</section>
