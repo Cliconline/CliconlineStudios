@@ -194,13 +194,16 @@ lottie-player {
 .informacion p {
 	font-size: 12px;
 }
-.share {
+
+.descarga {
 	position: absolute;
 	text-decoration: none;
 	color: #fff;
 	top: 10px;
 	right: 10px;
+	display: none;
 }
+
 
 .back {
 	position: fixed;
@@ -516,12 +519,6 @@ footer .rango {
 
 
 @media screen  and  (min-width: 1100px){
-  .descarga, .pago{ 
-	display: none;
-	}
-}
-
-@media screen  and  (min-width: 1100px){
 	.network { 
 		top: 52px;
 	  }
@@ -568,7 +565,7 @@ footer .rango {
   }
 
 
-  .material-icons-share {
+  .material-icons-descarga {
 	font-family: 'Material Icons Outlined';
 	font-weight: normal;
 	font-style: normal;
@@ -585,7 +582,7 @@ footer .rango {
 	padding: 5px 4px;
 	border-radius: 10px;
   }
-  .material-icons-share:hover {
+  .material-icons-descarga:hover {
 	background-color: rgb(27, 118, 255);
 }
 
