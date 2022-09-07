@@ -6,17 +6,16 @@ navigator.serviceWorker.register("./sw.js");
 let promptEvent = null;
 window.addEventListener("beforeinstallprompt", (e)=>{
     console.log("listo instal")
+    document.getElementById("descarga").style.display = "block";
     promptEvent = e;
     
 })
 
-document.querySelector('.icon5').addEventListener('click',(e)=>{
+
+document.querySelector('.descarga').addEventListener('click',(e)=>{
     promptEvent.prompt();
+    instaler();
     });
-
-
-
-
 
 //   barrade navegacion
 
@@ -344,10 +343,10 @@ document.querySelector("#submit").addEventListener("click", e => {
     let whatsapp = "998968077";
   
     let cliente = document.querySelector("#cliente").value;
-    let edad = document.querySelector("#edad").value;
-    let fecha = document.querySelector("#fecha").value;
+    let tipo = document.querySelector("#cardt").value;
     let modulos = document.querySelector("#modulos").value;
     let Cantidad = document.querySelector("#modulos2").value;
+    let fecha = document.querySelector("#fecha").value;
     let resp = document.querySelector("#respuesta");
   
     resp.classList.remove("fail");
@@ -358,18 +357,18 @@ document.querySelector("#submit").addEventListener("click", e => {
           *Datos de la Cotización*%0A
           *Nombre*%0A
           ${cliente}%0A
-          *Número de Contacto*%0A
-          ${edad}%0A
-          *Fecha de la comprar*%0A
-          ${fecha}%0A
-          *Cotiza*%0A
+          *Tipo de Tarjeta*%0A
+          ${tipo}%0A
+          *Categoría*%0A
           ${modulos}%0A
           *Cantidad*%0A
-          ${Cantidad}%0A`;
+          ${Cantidad}%0A
+          *Fecha de la cotización*%0A
+          ${fecha}%0A`;
           
 
   
-    if (cliente === "" || edad === "" || fecha === "" ) {
+    if (cliente === "" || tipo === "" || fecha === "" ) {
       resp.classList.add("fail");
       resp.innerHTML = `Espera, ${cliente} faltan algunos Datos `;
       return false;
@@ -481,8 +480,9 @@ document.querySelector("#submit").addEventListener("click", e => {
         Swal.fire({
         icon: 'success',
         title: 'Web Tarjeta Digital',
-        text: 'CliconlineStudios',
-        timer: 1500
+        text: 'install mobile/desktop',
+        timer: 1500,
+        footer: 'CliconlineStudios'
         });
       
       };
