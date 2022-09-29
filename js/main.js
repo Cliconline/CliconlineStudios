@@ -558,7 +558,7 @@ const shareData = {
 
 const shareData2 = {
     title: 'Cliconline',
-    text: 'Enviado desde Cliconline App. Web Tarjeta Yesenia Cajas',
+    text: 'Enviado desde Cliconline App. Tarjeta Digital Yesenia Cajas',
     url: 'https://cliconlinestudios.blogspot.com/p/yesenia-cajas.html',
     };
     
