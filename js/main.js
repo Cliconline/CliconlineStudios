@@ -413,6 +413,38 @@ document.querySelector("#submit").addEventListener("click", e => {
               }
             })
       };
+
+
+      //perfil2>
+      function save2(){
+        let url = `https://drive.google.com/u/0/uc?id=1Rjcw1pFmVGDtDtUv23qslh9Zk2ms44p2&export=download`;
+        window.open(url); 
+       };
+      
+      function ftuser2() {
+          Swal.fire({
+              title: 'Yesenia Cajas',
+              text: 'Dirección de Ventas.',
+              imageUrl: 'img/click.png',
+              imageWidth: 100,
+              confirmButtonText: 'Añadir a Contactos',
+              showCloseButton: 'true',
+              showCancelButton: true,
+        
+          
+            }).then((result) => {
+              if (result.isConfirmed) {
+                save2();
+                Swal.fire({
+                  position: 'top-end',
+                  icon: 'success',
+                  title: 'Descarga Correcta',
+                  showConfirmButton: false,
+                  timer: 1500
+                })
+              }
+            })
+      };
       
       function abrirpagos(){
         let urla = `https://cliconlinestudios.blogspot.com/p/opciones-de-pago.html`;
@@ -506,7 +538,7 @@ const shareData = {
     title: 'Web Tarjeta Digital',
     text: 'CliconlineStudios',
     url: 'https://cliconline.github.io/CliconlineStudios'
-  }
+  };
   
   
   // Share must be triggered by "user activation"
@@ -520,4 +552,29 @@ const shareData = {
     }else {
         sharetj();
     }
- }
+ };
+
+ // share tarjeta
+
+const shareData2 = {
+    title: 'Cliconline',
+    text: 'Enviado desde Cliconline App. Web Tarjeta Yesenia Cajas',
+    url: 'https://cliconlinestudios.blogspot.com/p/yesenia-cajas.html',
+    };
+    
+    
+    // Share must be triggered by "user activation"
+   
+    var urltarjeta = 'https://api.whatsapp.com//send?text=Enviado%20desde%20la%20App%20de%20Cliconline%20Ver%20Tarjeta%20Digital%20aqui%20https://cliconlinestudios.blogspot.com/p/yesenia-cajas.html'
+  
+    function sharetarjeta(){
+    if (navigator.share) {
+        navigator
+       .share(shareData2)
+       .then(() => console.log('correcto'))
+       .catch(error => console.log ('error sharing',error) );
+    }else {
+      window.open(urltarjeta);
+    }
+    };
+    
