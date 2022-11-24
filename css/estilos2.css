@@ -163,7 +163,7 @@ lottie-player {
 }
 
 .titulo img {
-	width: 9%;
+	width: 20%;
 }
 
 
@@ -172,6 +172,7 @@ lottie-player {
 .negocios{	
 	display: grid;
 	text-align: center;
+	align-items:center;
 	padding: 0px 10px;
 	grid-gap: 8px;
 	grid-template-columns: repeat(3, 1fr);
@@ -198,6 +199,7 @@ lottie-player {
 
 .negocios >div {
 	background: #ffffff70;
+	height: 90%;
 }
 
 .negocios >div:hover{
@@ -249,6 +251,11 @@ lottie-player {
 							"producto9 producto10";}								
 	
 	}
+
+.negocios .noventa{
+	width: 90%;
+	margin: 5px 5px;
+}
 
 /* ----- ----- Redes Sociales ----- ----- */
 
