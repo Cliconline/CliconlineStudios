@@ -280,7 +280,7 @@ lottie-player {
 
 .botonp {
 	color: #53affff1;
-	font-size: 12px;
+	font-size: 14px;
 	text-align: center;
 	text-decoration: none;
 	padding: 2px 8px;
@@ -291,7 +291,7 @@ lottie-player {
 .botonp:hover {
 	color: #003d72f1;
 	background:#fffffff1;
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: bold;
 	
 }
