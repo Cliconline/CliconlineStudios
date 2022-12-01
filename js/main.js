@@ -463,7 +463,7 @@ document.querySelector("#submit").addEventListener("click", e => {
             title: 'Opciones de Pago',
             icon: 'success',
             html:
-           '<a href="https://api.whatsapp.com//send?text=Enviado%20desde%20la%20App%20de%20Cliconline%20Ver%20Opciones%20de%20Pago%20https://cliconlinestudios.blogspot.com/p/opciones-de-pago.html" class="botonp" ><span class="fa fa-share-alt"></span >&nbsp;Compartir nro. Cuenta</a>',
+            '<a href="https://api.whatsapp.com//send?text=Cliconline%20Opciones%20de%20Pago%20Banco Pichicha%20Cta.Ahorro%20Número:2200476741%20Paga con Tranferencia Aquí%20https://cliconlinestudios.blogspot.com/p/opciones-de-pago.html" class="botonp" ><span class="fa fa-share-alt"></span >&nbsp;Compartir nro. Cuenta</a>',
             showCloseButton: true,
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
