@@ -482,10 +482,10 @@ width: 45%;
 	background: #000203;
 }
 
-.redes-sociales .whatsapp { background: #25D366; }
-.redes-sociales .facebook { background: #3b5998; }
-.redes-sociales .phone { background: #0d8bec; }
-.redes-sociales .instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#ff8e8e 90%); }
+.redes-sociales .whatsapp { background: radial-gradient(circle at 30% 107%, #2ed60d 0%, #067711 5%, #25d366 45%,#55da67 60%,#1a892c 90%); }
+.redes-sociales .facebook { background: radial-gradient(circle at 30% 107%, #d1d3f6 0%, #95dae8 5%, #3b5998 45%,#3e21c1 60%,#1561e4 90%); }
+.redes-sociales .phone { background: radial-gradient(circle at 30% 107%, #d1d3f6 0%, #95dae8 5%, #1152dd 45%,#0b75f7 60%,#0550d0 90%); }
+.redes-sociales .instagram { background: radial-gradient(circle at 30% 107%, #c4302b 5%, #fd5949 45%,#c25f4c 60%,#c56666d4 90%); }
 
 
 footer {
