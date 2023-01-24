@@ -14,7 +14,7 @@ document.querySelector("#submit").addEventListener("click", e => {
     resp.classList.remove("fail");
     resp.classList.remove("send");
   
-    let url = `https://api.whatsapp.com/send?phone=593959907464&text=
+    let url = `https://api.whatsapp.com/send?phone=593998968077&text=
           *CliconlineStudios*%0A
           *Datos de la Cotización*%0A
           *Nombre*%0A
