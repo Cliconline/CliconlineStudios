@@ -186,10 +186,26 @@ lottie-player {
 	
 }
 
+.negocios p {
+	text-align: center;
+	font-size: 10px;
+	font-weight: bold;
+
+
+}
+
 .negocios img {
 	width: 70%;
 
 }
+
+.negocios .ecuador {
+	width: 60%;
+
+
+}
+
+
 
 .negocios .pailas {
 	width: 60%;
