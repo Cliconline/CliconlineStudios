@@ -206,22 +206,20 @@ body {
 .btsn{
 	text-decoration: none;
 	position: absolute;
-	padding: 7px 0px;
+	padding: 23px 0px;
 	bottom: 0;
 	align-items: center;
 	text-align: left;	
+
 }
 
 .btsn img{
-	width: 10%;
+	width: 12%;
 	height: auto;
-	background: #ffffffb8;
 	border-radius: 5px;
-	object-fit: cover;
 	margin: 0px 0px 0px 5px;
 	padding: 5px 5px;
 	bottom: 0;
-	box-shadow: 1px 2px 5px #00020cdd;
 	
 }
 
@@ -241,22 +239,24 @@ box-shadow: 1px 2px 5px #002affdd;
 
 .btsn .linkn {
 	text-decoration: none;
-	color: #030303;
 	font-weight: bold;
 	font-size: 12px;
 	bottom: 0;
 	border-radius: 5px;
-	margin: 1px 0px ;
-	padding: 0px 5px;
-	box-shadow: 1px 1px 4px #2e51ffdd;
+	box-shadow: 1px 1px 4px #ffffffdd;
+	color: #ffffff;
+	background-color: #0f4ce8af;
+	margin: 0px 5px;
+	padding: 5px 5px;
 	
 
 }
 .btsn .linkn:hover{
 	color: #ffffff;
-	background-color: #0f4ce8af;
+	background-color: #1515151f;
 	margin: 0px 5px;
 	padding: 5px 5px;
+	box-shadow: 1px 1px 4px #0026ffdd;
 }
 
 
