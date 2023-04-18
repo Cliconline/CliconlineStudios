@@ -147,28 +147,34 @@ body {
 
 .swiper-Active {
 	width: 100%;
+	position: relative;
 
   }
 .swiper-Active img {
-	height: 255px;
+	height: 200px;
 	object-fit: cover;
 	width: 100%;
 }
 
 
-@media screen  and  (max-width: 500px){
+@media screen  and  (max-width: 450px){
 	.swiper-Active img {
-		height: 200px;
+		height: 170px;
 	}
 }
+
+@media screen  and  (min-width: 1000px){
+	.swiper-Active img{
+		height: 240px;
+	}
+  }
 
 .swiper-Active .swiper-button-prev,.swiper-Active .swiper-button-next {
 	color: #00020374;
 	--swiper-navigation-size: 15px;
-	background-color: #ffffffc3;
+	background-color: #ffffff7a;
 	height: 30px;
 	width: 30px;
-	margin-top: 67px;
 	font-weight: bold;
 	opacity: 0;
 }
@@ -197,13 +203,77 @@ body {
 }
 
 
+.btsn{
+	text-decoration: none;
+	position: absolute;
+	padding: 5px 0px;
+	bottom: 0;
+	align-items: center;
+	text-align: left;
+	width: 100%;
+	
+
+	
+
+}
+
+.btsn .logoplus{
+text-decoration: none;
+
+}
 
 
-@media screen  and  (min-width: 501px){
-	.swiper-Active .swiper-button-prev,.swiper-Active .swiper-button-next{
-		margin-top: 90px;
+.btsn img{
+	width: 10%;
+	height: auto;
+	background: #ffffffb8;
+	margin: 2px 5px;
+	padding: 5px 5px;
+	border-radius: 5px;
+	object-fit: cover;
+	backdrop-filter: blur(2px);
+	bottom: 0;
+	display: block;
+	box-shadow: 1px 2px 5px #00020cdd;
+	
+}
+
+.btsn img:hover{
+background-color: #ff000000;
+box-shadow: 1px 2px 5px #002affdd;
+
+}
+
+
+@media screen  and  (min-width: 408px){
+	.btsn img{
+		width: 7%;
 	}
   }
+
+
+.btsn .linkn {
+	text-decoration: none;
+	color: #030303;
+	font-weight: bold;
+	font-size: 12px;
+	bottom: 0;
+	padding: 1px 15px;
+	margin: 0px 5px;
+	background-color: #ffffffaf;
+	box-shadow: 1px 2px 5px #00020cdd;
+	backdrop-filter: blur(2px);
+	border-radius: 0px 10px;
+
+}
+.btsn .linkn:hover{
+	color: #ffffff;
+	background-color: #0f4ce8af;
+}
+
+
+
+
 
 
 /* ----- ----- negocios ----- ----- */
@@ -213,7 +283,7 @@ body {
 }
 
 .titulo img {
-	width: 20%;
+	width: 15%;
 }
 
 
@@ -349,10 +419,10 @@ body {
 	background: #000203;
 }
 
-.redes-sociales .whatsapp { background: #25D366; }
-.redes-sociales .facebook { background: #3b5998; }
-.redes-sociales .phone { background: #0d8bec; }
-.redes-sociales .instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#ff8e8e 90%); }
+.redes-sociales .whatsapp { background: radial-gradient(circle at 30% 107%, #2ed60d 0%, #067711 5%, #25d366 45%,#55da67 60%,#1a892c 90%); }
+.redes-sociales .facebook { background: radial-gradient(circle at 30% 107%, #d1d3f6 0%, #95dae8 5%, #3b5998 45%,#3e21c1 60%,#1561e4 90%); }
+.redes-sociales .phone { background: radial-gradient(circle at 30% 107%, #d1d3f6 0%, #95dae8 5%, #1152dd 45%,#0b75f7 60%,#0550d0 90%); }
+.redes-sociales .instagram { background: radial-gradient(circle at 30% 107%, #c4302b 5%, #fd5949 45%,#c25f4c 60%,#c56666d4 90%); }
 
 
 
@@ -550,7 +620,7 @@ footer .rango {
 	width: 100%;
 	height: 5%;
 	text-decoration: none;
-	background-color: rgba(255, 255, 255, 0.559);
+	background-color: rgba(255, 255, 255, 0.744);
 	backdrop-filter: blur(2px);
 	border: solid 1px rgb(255, 255, 255, 05);
 	box-shadow: 1px 1px 5px #ffffffee;

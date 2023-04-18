@@ -1,5 +1,4 @@
-
-
+  
 
              //    menu laterl 
 
@@ -25,4 +24,11 @@
             
         }     
   
+// llevar cerrar side automatico
+
+document.querySelector('.tarjeta').addEventListener('click',()=>{
+    document.getElementById("side").style.display = "none";
+    conta=0;
+    });
+        
 
