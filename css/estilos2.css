@@ -206,34 +206,20 @@ body {
 .btsn{
 	text-decoration: none;
 	position: absolute;
-	padding: 5px 0px;
+	padding: 7px 0px;
 	bottom: 0;
 	align-items: center;
-	text-align: left;
-	width: 100%;
-	
-
-	
-
+	text-align: left;	
 }
-
-.btsn .logoplus{
-text-decoration: none;
-
-}
-
 
 .btsn img{
 	width: 10%;
 	height: auto;
 	background: #ffffffb8;
-	margin: 2px 5px;
-	padding: 5px 5px;
 	border-radius: 5px;
 	object-fit: cover;
-	backdrop-filter: blur(2px);
+	margin: 0px 0px 0px 5px;
 	bottom: 0;
-	display: block;
 	box-shadow: 1px 2px 5px #00020cdd;
 	
 }
@@ -247,7 +233,7 @@ box-shadow: 1px 2px 5px #002affdd;
 
 @media screen  and  (min-width: 408px){
 	.btsn img{
-		width: 7%;
+		width: 8%;
 	}
   }
 
@@ -258,17 +244,18 @@ box-shadow: 1px 2px 5px #002affdd;
 	font-weight: bold;
 	font-size: 12px;
 	bottom: 0;
-	padding: 1px 15px;
-	margin: 0px 5px;
-	background-color: #ffffffaf;
-	box-shadow: 1px 2px 5px #00020cdd;
-	backdrop-filter: blur(2px);
-	border-radius: 0px 10px;
+	border-radius: 5px;
+	margin: 1px 0px ;
+	padding: 0px 5px;
+	box-shadow: 1px 1px 4px #2e51ffdd;
+	
 
 }
 .btsn .linkn:hover{
 	color: #ffffff;
 	background-color: #0f4ce8af;
+	margin: 0px 5px;
+	padding: 5px 5px;
 }
 
 
@@ -284,6 +271,7 @@ box-shadow: 1px 2px 5px #002affdd;
 
 .titulo img {
 	width: 15%;
+	margin-top: 5px;
 }
 
 
