@@ -7,7 +7,7 @@
 }
 
 body {
-	background:linear-gradient(rgba(0, 0, 0, 0.155), rgba(255, 255, 255, 0.66)), url('../img/fondsss.png');
+	background:linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.107)), url('../img/FONDONG.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-family:'Open Sans',Sans-serif, Arial, Helvetica;
@@ -71,7 +71,7 @@ lottie-player {
 .tarjeta {
 	margin: 5px 0;
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.418);
+	background-color: rgba(255, 255, 255, 0.645);
 	backdrop-filter: blur(2px);
 	border: solid 1px rgb(255, 255, 255, 05);
 	box-shadow: 1px 1px 5px #ffffffee;
@@ -120,7 +120,9 @@ lottie-player {
 	left: 12px;	
 }
 
-
+.imglins{
+	width: 30px;
+}
 
 .sidebar .menu1 {
 	color: #fffffff1;
@@ -264,10 +266,10 @@ lottie-player {
 .boton {
 	background: linear-gradient(102deg, #0998f7 40%, #1619d4 60%);
 	color: #fffffff1;
-	font-size: 18px;
+	font-size: 12px;
 	text-align: center;
 	text-decoration: none;
-	padding: 8px 18%;
+	padding: 6px 16%;
 	border-radius: 10px;
 	box-shadow: 1px 1px 5px #fdfdfdec;
     animation: pulse 1.5s infinite;	
@@ -496,6 +498,9 @@ footer {
 	position: relative;
 	color: rgba(0, 0, 0, 0.726);
 	font-size: 14px;
+}
+footer div img {
+	width: 4%;
 }
 
 footer .rango {
@@ -818,6 +823,11 @@ footer .rango {
 
   }
   
+.logoslin {
+	width: 25px;
+}
+
+
   .formulario__titulo,
   .formulario__subtitulo,
   .formulario__parrafo {
@@ -903,7 +913,7 @@ footer .rango {
 		text-align: center;
 		text-decoration: none;
 		width: 100%;
-		background-color: rgba(255, 255, 255, 0.418);
+		background-color: rgba(255, 255, 255, 0.704);
 		backdrop-filter: blur(2px);
 		border: solid 1px rgb(255, 255, 255, 05);
 		box-shadow: 1px 1px 5px #ffffffee;

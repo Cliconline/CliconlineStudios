@@ -446,32 +446,26 @@ document.querySelector("#submit").addEventListener("click", e => {
             })
       };
       
-      function abrirpagos(){
-        let urla = `https://cliconlinestudios.blogspot.com/p/opciones-de-pago.html`;
-        window.open(urla); 
-       };
-
-
-       function verpagos(){
-        let urlsp = `https://cliconlinestudios.blogspot.com/p/opciones-de-pago.html`;
+   
+       function Unirse(){
+        let urlsp = `https://www.youtube.com/channel/UC5nley-NIFYYC9wFaRLxhCg/join`;
         window.open(urlsp); 
        };
 
 
       function msjpagos() {
         Swal.fire({
-            title: 'Opciones de Pago',
+            title: 'Cliconline Premium',
             icon: 'success',
-            html:
-            '<a href="https://api.whatsapp.com//send?text=*Cliconline Opciones de Pago*%0ABanco Pichicha%0ACta.Ahorro%20Número: 2200476741%0APaga con Transferencia Aquí%0Ahttps://cliconlinestudios.blogspot.com/p/opciones-de-pago.html" class="botonp" ><span class="fa fa-share-alt"></span >&nbsp;Compartir nro. Cuenta</a>',
+            text:'Accede a los beneficios de la membresía',
             showCloseButton: true,
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
-            confirmButtonText: 'Ver nro. Cuenta',
+            confirmButtonText: 'Unirse',
           })
           .then((result) => {
             if (result.isConfirmed) {
-              verpagos();
+              Unirse();
               Swal.fire({
                 position: 'top-end',
                 icon: 'success',
@@ -513,7 +507,7 @@ document.querySelector("#submit").addEventListener("click", e => {
         icon: 'success',
         title: 'Web Tarjeta Digital',
         text: 'install mobile/desktop',
-        timer: 1500,
+        timer: 2500,
         footer: 'CliconlineStudios'
         });
       

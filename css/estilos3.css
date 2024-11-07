@@ -304,27 +304,16 @@ box-shadow: 1px 2px 5px #002affdd;
 }
 
 .negocios img {
-	width: 70%;
-
-}
-
-.negocios .ecuador {
-	width: 60%;
-
+	width: 50%;
 
 }
 
 
 
-.negocios .pailas {
-	width: 60%;
-	margin: 15px;
-
-}
 
 .negocios >div {
 	background: #ffffff70;
-	height: 90%;
+	height: 100%;
 }
 
 .negocios >div:hover{
@@ -337,8 +326,8 @@ box-shadow: 1px 2px 5px #002affdd;
 	border-radius: 5%;
 }
 .negocios .btc {
-	background: linear-gradient(102deg, #0099ff 40%, #0099ffd2 60%);
-	color: #fffffff1;
+	background: linear-gradient(102deg, #fdfdfd 40%, #7acaffd2 60%);
+	color: #000000f1;
 	font-size: 10px;
 	text-align: center;
 	text-decoration: none;
@@ -382,8 +371,22 @@ box-shadow: 1px 2px 5px #002affdd;
 	margin: 5px 5px;
 }
 
+.negocios  .playstore{
+	width: 15px;
+	margin: 5px;
+	position: fixed;
+
+}
+
+
 /* ----- ----- Redes Sociales ----- ----- */
 
+
+
+.info{
+	text-align: center;
+	font-size: 10px;
+}
 
 .redes-sociales {
 	text-align: center;
