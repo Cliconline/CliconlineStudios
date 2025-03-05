@@ -378,6 +378,12 @@ box-shadow: 1px 2px 5px #002affdd;
 
 }
 /* ----- ----- wallpaper ----- ----- */
+
+.titulo2{
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
 .wallpaper {
 	width: 95%;
 	max-width: 700px;
@@ -392,16 +398,18 @@ box-shadow: 1px 2px 5px #002affdd;
 	font-size: 10px;
 	text-align: center;
 	text-decoration: none;
-	padding: 5px 20px;
+	padding: 6px 20px;
+	margin: 5px ;
 	border-radius: 10px;
 	box-shadow: 1px 1px 5px #0a0a0ac4;
+	border: solid 1px rgb(255, 255, 255, 05);
 	display: inline-block;
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, .5)	
 	
 }
 
 .wallpaper  .btc:hover{
-	background: linear-gradient(102deg, #6aff00 40%, #15ff00d2 60%);
+	background: linear-gradient(102deg, #c0fc96 40%, #15ff00d2 60%);
 	color: #000000f1;
 	text-shadow: #000000;
 	border: solid 1px hsla(0, 0%, 0%, 0.769);
@@ -412,14 +420,39 @@ box-shadow: 1px 2px 5px #002affdd;
     background-color: #01ff38;
 }
 
+
+.info{
+	width: 95%;
+	display: flex; /* Alinea los elementos en una fila */
+            gap: 10px; /* Espacio entre los botones */
+	align-items:center;
+}
+
+.infoa{
+	background: linear-gradient(102deg, #0095ff 90%, #ffffff49 5%);
+	color: #fffffff1;
+	font-size: 10px;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px 20px;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px #0a0a0ac4;
+	border: solid 1px rgb(255, 255, 255, 05);
+	display: inline-block;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, .5)	
+	
+}
+
+.infoa:hover{
+	background: linear-gradient(102deg, #00f2ff 40%, #ffffff5d 60%);
+	color: #000;
+}
+
+
 /* ----- ----- Redes Sociales ----- ----- */
 
 
 
-.info{
-	text-align: center;
-	font-size: 10px;
-}
 
 .redes-sociales {
 	text-align: center;
