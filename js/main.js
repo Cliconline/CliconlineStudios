@@ -391,7 +391,7 @@ document.querySelector("#submit").addEventListener("click", e => {
       
       function ftuser() {
           Swal.fire({
-              title: 'William Paredes',
+              title: 'cliconline',
               text: 'Marketing Digital.',
               imageUrl: 'img/click.png',
               imageWidth: 100,
@@ -572,3 +572,4 @@ const shareData2 = {
     }
     };
     
+
