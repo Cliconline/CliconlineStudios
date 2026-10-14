@@ -2,11 +2,12 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="referrer" content="strict-origin-when-cross-origin">
 	<meta http-equiv="X-UA-Compatible" content="ig=edge">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/youtube-theme.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<meta property="og:title" content="Cliconline Studios"/>
 	<link rel="manifest" href="manifest.json">
@@ -22,65 +23,77 @@
   <!-- ID Particles.js -->
   <div id="particles-js"></div>
 
-	<div class="sidebar"><a class="menu1" id="sidebar" href="javascript:sidebar()"><span lang="en" class="fa fa-search"></span ></a>
-		<br>
-	<div class="side" id="side">
-	
-<a href="javascript:inicio()"><span class="fa fa-home"></span >&nbsp;Inicio</a>
-		
-<a class="side1" href="javascript:servicios()">Servicios</a>
-
-<a class="side1" href="javascript:categorias()">Tarjetas Digitales</a>
-
-<a class="side2" href="javascript:comofunciona()">Sitios Web</a>
-
-<a class="side3" href="javascript:planes()">Publicidad</a>
-
-<a class="side3" href="javascript:cotizar()">Cotizar</a>
-
-<a href="javascript:cerrarside()">Cerrar</a>
-   </div>
-</div>
-
  <div class="contenedor" id="contenedor">
 	 
-	 <section class="tarjeta" id="tarjeta"> 
-	
-			 <!-- banner -->
+	 <section class="tarjeta" id="tarjeta">
+        <header class="site-toolbar">
+          <div class="toolbar-actions">
+            <button class="toolbar-icon" id="sidebar" type="button" aria-expanded="false" aria-controls="search-links" aria-label="Mostrar enlaces" title="Mostrar enlaces"><span class="fa fa-search" aria-hidden="true"></span></button>
+            <button class="toolbar-icon qr-toggle" id="qr-toggle" type="button" aria-expanded="false" aria-controls="qr-footer" aria-label="Mostrar código QR" title="Mostrar código QR"><span class="fa fa-qrcode" aria-hidden="true"></span></button>
+          </div>
+          <a class="site-brand" href="javascript:inicio()" aria-label="CliconlineStudios, inicio">Cliconline<span>Studios</span></a>
+          <div class="toolbar-right">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false"><span class="theme-icon" aria-hidden="true">🌙</span><span class="theme-label">Modo oscuro</span></button>
+            <div class="utility-buttons">
+              <a href="javascript:instaler()" class="toolbar-icon install-toggle" id="install-toggle" aria-label="Instalar aplicación" title="Instalar aplicación"><span class="fa fa-download" aria-hidden="true"></span></a>
+            </div>
+          </div>
+        </header>
+        <nav class="search-links" id="search-links" aria-label="Menú principal" hidden>
+          <a href="javascript:inicio()" class="search-link"><span class="fa fa-home" aria-hidden="true"></span> Inicio</a>
+          <a href="javascript:servicios()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-cogs" aria-hidden="true"></span> Servicios</a>
+          <a href="javascript:categorias()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-credit-card" aria-hidden="true"></span> Tarjetas Digitales</a>
+          <a href="javascript:comofunciona()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-globe" aria-hidden="true"></span> Sitios Web</a>
+          <a href="javascript:planes()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-bullhorn" aria-hidden="true"></span> Publicidad</a>
+		 <a href="networks.html" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-globe" aria-hidden="true"></span>Network</a>
+          <a href="javascript:cerrarside()" class="search-link"><span class="fa fa-times-circle" aria-hidden="true"></span> Cerrar</a>
+        </nav>
+        <nav class="quick-links" aria-label="Enlaces rápidos">
+          <a href="https://whatsapp.com/channel/0029Va8FGeiBPzjV7dzFz62h" class="quick-link"><span class="fa fa-whatsapp" aria-hidden="true"></span><span>WhatsApp</span></a>
+          <a href="https://groups.google.com/g/youtube-cliconline" class="quick-link"><span class="fa fa-users" aria-hidden="true"></span><span>Grupo</span></a>
+          <a href="https://www.youtube.com/@cliconlineStudios/videos" class="quick-link"><span class="fa fa-play-circle" aria-hidden="true"></span><span>Videos</span></a>
+          <a href="tienda.html" class="quick-link"><span class="fa fa-shopping-bag" aria-hidden="true"></span><span>Tienda</span></a>
+          <a href="https://youtube.com/@cliconlinegaming?sub_confirmation=1" class="quick-link"><span class="fa fa-gamepad" aria-hidden="true"></span><span>Gaming</span></a>
+          <a href="https://www.youtube.com/@cliconlineStudios/posts" class="quick-link"><span class="fa fa-envelope" aria-hidden="true"></span><span>Posts</span></a>
+        </nav>
 
-		 <div class="banner" >
-		
-			<img class="portada" src="img/b11-01.png" alt="">
-
-			<a href="javascript:instaler()" class="descarga" id="descarga" ><span class="material-icons-descarga">
-				browser_updated
-				</span></a>	
-	
-		 </div>
 
 	 <!-- incio informacion -->
-<br>
+
 <section class="informacion" id="informacion">
 	
 
-	<p><h2 class="titulo">CliconlineStudios</h2></p>
-<br>
+         <!-- Canal de YouTube Cliconline Studios -->
+         <section class="youtube-panel" aria-labelledby="youtube-title">
+           <div class="youtube-heading"><span class="youtube-mark" aria-hidden="true">▶</span><div><h3 id="youtube-title">Cliconline Studios en YouTube</h3><p>Videos, animación, tecnología y creatividad digital.</p></div></div>
+           <div class="youtube-stats" aria-live="polite">
+            
+           </div>
+           <div id="youtube-videos" class="youtube-videos">
+             <iframe title="Videos recientes de Cliconline Studios" src="https://www.youtube.com/channel/UC5nley-NIFYYC9wFaRLxhCg" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           </div><br>
+           <a class="youtube-subscribe" href="https://www.youtube.com/@cliconlineStudios?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Suscribirme al canal ↗</a>
+         </section>
 
-			 <section class="bt">
-			 <a href="javascript:servicios()" class="boton" id="inicio" ><span class="fa fa-chevron-circle-right"></span >&nbsp;Servicios</a>
-			</section>
-			<br>
-			<p>Diseño Web, Animación y Video 3D</p>
-			<br>
-			<section class="bt">
-			<a href="tienda.html" class="boton" id="inicio" ><span class="fa fa-shopping-bag"></span >&nbsp;Tienda</a>
-		   </section>
+ <!-- Canal de YouTube Cliconline gaming -->
+         <section class="youtube-panel" aria-labelledby="youtube-title">
+           <div class="youtube-heading"><span class="youtube-mark" aria-hidden="true">▶</span><div><h3 id="youtube-title">Cliconline Gaming en YouTube</h3><p>Videos, animación, tecnología y creatividad digital.</p></div></div>
+           <div class="youtube-stats" aria-live="polite">
+            
+           </div>
+           <div id="youtube-videos" class="youtube-videos">
+             <iframe title="Videos recientes de Cliconline Studios" src="https://www.youtube.com/channel/UCGdRDSvZHPLjHg9Tx5r3nvw" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           </div>
 		   <br>
-		<p>Activos Digitales</p>
-		<br>
-         <p class="qr"><img src="img/qrclick.png" alt="logo"></p>
-		 <p class="scan">Scan Me</p>
+           <a class="youtube-subscribe" href="https://www.youtube.com/@cliconlineStudios?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Suscribirme al canal ↗</a>
+         </section>
+
+
+
 		</section>
+
+	
+	
 	
 		<!-- portafolios -->
 
@@ -363,6 +376,19 @@
 			
 		</section>
 
+	 <!-- banner -->
+
+		 <div class="banner" >
+		
+			<img class="portada" src="img/b11-01.png" alt="">
+
+			<a href="javascript:instaler()" class="descarga" id="descarga" ><span class="material-icons-descarga">
+				browser_updated
+				</span></a>	
+	
+		 </div>
+
+
 		<footer>
 			<p class="rango">WebMaster</p>
 			<p>©Desing by Cliconline®</p>
@@ -373,6 +399,14 @@
 	 </section>
 	
  </div>
+        <section class="qr-footer" id="qr-footer" hidden aria-label="Código QR para compartir">
+          <div class="qr-footer-card">
+            <button class="qr-close" id="qr-close" type="button" aria-label="Cerrar código QR" title="Cerrar">×</button>
+            <h2>Comparte CliconlineStudios</h2>
+            <p>Escanea este código QR para visitar nuestra página.</p>
+            <img src="img/qrclick.png" alt="Código QR de CliconlineStudios" loading="lazy">
+          </div>
+        </section>
 <br><br><br>
          <a href="javascript:back()" class="back" id="back" ><span class="material-back">
 				arrow_back_ios
@@ -402,6 +436,7 @@
 	</section>
 
 	<script src="js/main.js"></script>
+	<script src="js/youtube-theme.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 			
      </body>

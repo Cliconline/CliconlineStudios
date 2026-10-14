@@ -209,14 +209,13 @@ function sharetj() {
 
 
 function cotizar() {
-    document.getElementById("screen4").style.display = "block";
-    document.getElementById("planes").style.display = "none";
-    document.getElementById("portafolio").style.display = "none";
-    document.getElementById("side").style.display = "none";
-    document.getElementById("informacion").style.display = "none";
-    document.getElementById("comofunciona").style.display = "none";
-    document.getElementById("costos").style.display = "none";
-    document.getElementById("sharelink").style.display = "none";
+    // Ocultar la portada y las demás secciones al abrir Cotizar directamente.
+    ["informacion", "planes", "portafolio", "side", "comofunciona", "costos", "sharelink"].forEach((id) => {
+        const seccion = document.getElementById(id);
+        if (seccion) seccion.style.display = "none";
+    });
+    const formularioCotizar = document.getElementById("screen4");
+    if (formularioCotizar) formularioCotizar.style.display = "block";
     conta=0;
     contador=2;
     backarriba();
@@ -226,36 +225,32 @@ function cotizar() {
 //   boton atras
 
 function back() {
+    // El boton vuelve a la vista anterior dentro de la pagina sin recargarla.
     backarriba();
-    if (contador==1) {
-        document.getElementById("informacion").style.display = "block";
-        document.getElementById("portafolio").style.display = "none";
-        document.getElementById("planes").style.display = "none"
-        document.getElementById("side").style.display = "none";
-        document.getElementById("sharelink").style.display = "none";
-        naviactive();
-        conta=0;
-        contador=0;
-        history.back();
-    
 
-    }
-    else if(contador==2){
+    const ocultar = ["informacion", "portafolio", "costos", "comofunciona", "planes", "side", "screen4", "sharelink"];
+    ocultar.forEach((id) => {
+        const seccion = document.getElementById(id);
+        if (seccion) seccion.style.display = "none";
+    });
+
+    // Desde una subseccion de servicios, volver al listado de servicios.
+    if (contador === 2) {
         document.getElementById("portafolio").style.display = "block";
-        document.getElementById("costos").style.display = "none";
-        document.getElementById("comofunciona").style.display = "none";
-        document.getElementById("planes").style.display = "none";
-        document.getElementById("screen4").style.display = "none";
-        document.getElementById("sharelink").style.display = "none";
-        conta=0;
-        contador=1;
+        navioff();
+        conta = 0;
+        contador = 1;
         ids1();
-      
-
+        return;
     }
-    
-    
-    }; 
+
+    // Desde servicios o compartir, volver al inicio.
+    document.getElementById("informacion").style.display = "block";
+    naviactive();
+    conta = 0;
+    contador = 0;
+}
+
 
 
              //    menu laterl 
