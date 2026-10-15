@@ -1,21 +1,37 @@
 
-//   service worked
-
-navigator.serviceWorker.register("./sw.js");
-
-let promptEvent = null;
-window.addEventListener("beforeinstallprompt", (e)=>{
-    console.log("listo instal")
-    document.getElementById("descarga").style.display = "block";
-    promptEvent = e;
-    
-})
-
-
-document.querySelector('.descarga').addEventListener('click',(e)=>{
-    promptEvent.prompt();
-    instaler();
+// Registro seguro del Service Worker.
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch(() => {});
     });
+}
+
+// Instalación PWA sin alertas.
+let promptEvent = null;
+const installButton = document.getElementById("install-toggle");
+const legacyInstallButton = document.getElementById("descarga");
+
+window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    promptEvent = event;
+    if (installButton) installButton.hidden = false;
+    if (legacyInstallButton) legacyInstallButton.style.display = "block";
+});
+
+async function instaler() {
+    if (!promptEvent) return;
+    promptEvent.prompt();
+    try { await promptEvent.userChoice; } catch (_) {}
+    promptEvent = null;
+}
+if (installButton) installButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    instaler();
+});
+if (legacyInstallButton) legacyInstallButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    instaler();
+});
 
 //   barrade navegacion
 
@@ -279,10 +295,12 @@ function back() {
         
         // llevar cerrar side automatico
 
-document.querySelector('.tarjeta').addEventListener('click',()=>{
-    document.getElementById("side").style.display = "none";
-    conta=0;
-    });
+const tarjetaElement = document.querySelector('.tarjeta');
+if (tarjetaElement) tarjetaElement.addEventListener('click', () => {
+    const sideElement = document.getElementById("side");
+    if (sideElement) sideElement.style.display = "none";
+    conta = 0;
+});
         
  // slider
  
@@ -293,6 +311,7 @@ document.querySelector('.tarjeta').addEventListener('click',()=>{
     const btnLeft = document.querySelector("#btn-left");
     const btnRight = document.querySelector("#btn-rigth");
     
+    if (slider && sliderSection.length && btnLeft && btnRight) {
     slider.insertAdjacentElement('afterbegin', sliderSectionlast);
     
     function next (){
@@ -329,9 +348,10 @@ document.querySelector('.tarjeta').addEventListener('click',()=>{
     setInterval(function(){
         next();
     },5000);
+    }
 
-
-document.querySelector("#submit").addEventListener("click", e => {
+const submitButton = document.querySelector("#submit");
+if (submitButton) submitButton.addEventListener("click", e => {
     e.preventDefault();
   
     //INGRESE UN NUMEROS DE WHATSAPP VALIDOS AQUI:
@@ -511,13 +531,13 @@ document.querySelector("#submit").addEventListener("click", e => {
   
 
 const $content = document.getElementById('textareacopy');
-      $btncopy = document.getElementById ('btcopi');
-      $title = document.getElementById ('titlelink')
+      const $btncopy = document.getElementById('btcopi');
+      const $title = document.getElementById('titlelink');
 
-      $btncopy.addEventListener('click', e => {
+      if ($btncopy && $content) $btncopy.addEventListener('click', () => {
         $content.select();
-        document.execCommand('copy')
-        msj2();
+        try { document.execCommand('copy'); } catch (_) {}
+        if (typeof msj2 === "function") msj2();
       });
 
 
