@@ -6,32 +6,30 @@ if ("serviceWorker" in navigator && (location.protocol === "https:" || location.
     });
 }
 
-// Instalación PWA sin alertas.
+// Instalación PWA: usar el diálogo nativo del navegador, sin alertas propias.
 let promptEvent = null;
 const installButton = document.getElementById("install-toggle");
 const legacyInstallButton = document.getElementById("descarga");
-
 window.addEventListener("beforeinstallprompt", (event) => {
-    event.preventDefault();
-    promptEvent = event;
-    if (installButton) installButton.hidden = false;
-    if (legacyInstallButton) legacyInstallButton.style.display = "block";
+  event.preventDefault();
+  promptEvent = event;
+  if (installButton) { installButton.hidden = false; installButton.setAttribute("aria-label", "Instalar aplicación"); }
+  if (legacyInstallButton) legacyInstallButton.style.display = "block";
 });
-
+window.addEventListener("appinstalled", () => { promptEvent = null; });
 async function instaler() {
-    if (!promptEvent) return;
-    promptEvent.prompt();
-    try { await promptEvent.userChoice; } catch (_) {}
+  if (promptEvent) {
+    try { await promptEvent.prompt(); await promptEvent.userChoice; } catch (_) {}
     promptEvent = null;
+    return;
+  }
+  // Si el navegador no ofrece el diálogo de instalación, abrir instrucciones sin alertas.
+  const help = document.getElementById("install-help");
+  if (help) { help.hidden = !help.hidden; if (!help.hidden) help.scrollIntoView({behavior:"smooth",block:"nearest"}); }
 }
-if (installButton) installButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    instaler();
-});
-if (legacyInstallButton) legacyInstallButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    instaler();
-});
+window.instaler = instaler;
+if (installButton) installButton.addEventListener("click", (event) => { event.preventDefault(); instaler(); });
+if (legacyInstallButton) legacyInstallButton.addEventListener("click", (event) => { event.preventDefault(); instaler(); });
 
 //   barrade navegacion
 
@@ -269,39 +267,68 @@ function back() {
 
 
 
-             //    menu laterl 
+// Sidebar flotante con efecto liquid glass.
+(function () {
+  const toggle = document.getElementById("sidebar");
+  const menu = document.getElementById("search-links");
+  const backdrop = document.getElementById("sidebar-backdrop");
 
-    var btns = document.getElementById("inicio"),
-    informacion = document.getElementById("infomacion"),
-    conta=0;
+  function openMenu() {
+    if (!menu || !backdrop) return;
+    menu.hidden = false;
+    backdrop.hidden = false;
+    requestAnimationFrame(() => {
+      menu.classList.add("is-open");
+      backdrop.classList.add("is-visible");
+      menu.setAttribute("aria-hidden", "false");
+      menu.removeAttribute("inert");
+      if (toggle) toggle.setAttribute("aria-expanded", "true");
+    });
+  }
+  function closeMenu() {
+    if (!menu || !backdrop) return;
+    menu.classList.remove("is-open");
+    backdrop.classList.remove("is-visible");
+    menu.setAttribute("aria-hidden", "true");
+    menu.setAttribute("inert", "");
+    if (toggle) toggle.setAttribute("aria-expanded", "false");
+    window.setTimeout(() => {
+      if (!menu.classList.contains("is-open")) {
+        menu.hidden = true;
+        backdrop.hidden = true;
+      }
+    }, 320);
+  }
+  window.cerrarside = closeMenu;
+  if (toggle) toggle.addEventListener("click", () => {
+    if (menu && menu.classList.contains("is-open")) closeMenu();
+    else openMenu();
+  });
+  if (backdrop) backdrop.addEventListener("click", closeMenu);
+  if (menu) menu.querySelectorAll("a").forEach(link => {
+    if (!link.href.includes("cerrarside")) link.addEventListener("click", closeMenu);
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeMenu();
+  });
+})();
 
-    function sidebar()  {
+// Mostrar/ocultar el código QR.
+(function () {
+  const button = document.getElementById("qr-toggle");
+  const panel = document.getElementById("qr-footer");
+  const close = document.getElementById("qr-close");
+  function toggleQr(force) {
+    if (!button || !panel) return;
+    const show = typeof force === "boolean" ? force : panel.hidden;
+    panel.hidden = !show;
+    button.setAttribute("aria-expanded", String(show));
+    if (show) panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+  if (button) button.addEventListener("click", () => toggleQr());
+  if (close) close.addEventListener("click", () => toggleQr(false));
+})();
 
-        if (conta==0) {
-            document.getElementById("side").style.display = "block";
-            conta=1;
-        }
-        else{
-            document.getElementById("side").style.display = "none";
-            conta=0;
-        }
-        };
-
-        function cerrarside() {
-            document.getElementById("side").style.display = "none";
-            conta=0;
-            
-        };    
-        
-        // llevar cerrar side automatico
-
-const tarjetaElement = document.querySelector('.tarjeta');
-if (tarjetaElement) tarjetaElement.addEventListener('click', () => {
-    const sideElement = document.getElementById("side");
-    if (sideElement) sideElement.style.display = "none";
-    conta = 0;
-});
-        
  // slider
  
     const slider = document.querySelector("#slider");

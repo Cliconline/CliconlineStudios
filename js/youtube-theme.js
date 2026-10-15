@@ -4,42 +4,6 @@
 'use strict';
 var root=document.documentElement,toggle=document.getElementById('theme-toggle');
 var icon=toggle&&toggle.querySelector('.theme-icon'),label=toggle&&toggle.querySelector('.theme-label');
-var qrToggle=document.getElementById('qr-toggle'),qrFooter=document.getElementById('qr-footer');
-function setQrVisible(show){
- if(!qrToggle||!qrFooter)return;
- qrFooter.hidden=!show;
- qrToggle.setAttribute('aria-expanded',String(show));
- qrToggle.setAttribute('aria-label',show?'Ocultar código QR':'Mostrar código QR');
- qrToggle.setAttribute('title',show?'Ocultar código QR':'Mostrar código QR');
- qrToggle.innerHTML='<span class="fa '+(show?'fa-times':'fa-qrcode')+'" aria-hidden="true"></span>';
- if(show)qrFooter.scrollIntoView({behavior:'smooth',block:'end'});
-}
-if(qrToggle&&qrFooter){qrToggle.addEventListener('click',function(){setQrVisible(qrFooter.hidden)});}
-var qrClose=document.getElementById('qr-close');if(qrClose)qrClose.addEventListener('click',function(){setQrVisible(false);qrToggle&&qrToggle.focus();});
-var searchToggle=document.getElementById('sidebar'),searchLinks=document.getElementById('search-links');
-if(searchToggle&&searchLinks){searchToggle.addEventListener('click',function(){
- var show=searchLinks.hidden;searchLinks.hidden=!show;
- searchToggle.setAttribute('aria-expanded',String(show));
- searchToggle.setAttribute('aria-label',show?'Ocultar enlaces':'Mostrar enlaces');
- searchToggle.setAttribute('title',show?'Ocultar enlaces':'Mostrar enlaces');
- searchToggle.innerHTML='<span class="fa '+(show?'fa-times':'fa-search')+'" aria-hidden="true"></span>';
- if(show){searchLinks.classList.remove('is-opening');void searchLinks.offsetWidth;searchLinks.classList.add('is-opening');}
-});}
-
-if(searchLinks){
- searchLinks.addEventListener('click',function(event){
-  var link=event.target.closest('a');
-  if(!link)return;
-  if(link.textContent.trim()==='Cerrar'){
-   event.preventDefault();
-   searchLinks.hidden=true;
-   if(searchToggle){searchToggle.setAttribute('aria-expanded','false');searchToggle.innerHTML='<span class="fa fa-search" aria-hidden="true"></span>';}
-   return;
-  }
-  searchLinks.hidden=true;
-  if(searchToggle){searchToggle.setAttribute('aria-expanded','false');searchToggle.innerHTML='<span class="fa fa-search" aria-hidden="true"></span>';}
- });
-}
 function applyTheme(theme){
  var dark=theme==='dark';root.setAttribute('data-theme',dark?'dark':'light');
  if(toggle){toggle.setAttribute('aria-pressed',String(dark));toggle.setAttribute('aria-label',dark?'Cambiar a modo claro':'Cambiar a modo oscuro');}

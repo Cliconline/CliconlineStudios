@@ -29,23 +29,20 @@
         <header class="site-toolbar">
           <div class="toolbar-actions">
             <button class="toolbar-icon" id="sidebar" type="button" aria-expanded="false" aria-controls="search-links" aria-label="Mostrar enlaces" title="Mostrar enlaces"><span class="fa fa-search" aria-hidden="true"></span></button>
-            <button class="toolbar-icon qr-toggle" id="qr-toggle" type="button" aria-expanded="false" aria-controls="qr-footer" aria-label="Mostrar código QR" title="Mostrar código QR"><span class="fa fa-qrcode" aria-hidden="true"></span></button>
           </div>
           <a class="site-brand" href="javascript:inicio()" aria-label="CliconlineStudios, inicio">Cliconline<span>Studios</span></a>
           <div class="toolbar-right">
             <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false"><span class="theme-icon" aria-hidden="true">🌙</span><span class="theme-label">Modo oscuro</span></button>
-            <div class="utility-buttons">
-              <a href="javascript:instaler()" class="toolbar-icon install-toggle" id="install-toggle" aria-label="Instalar aplicación" title="Instalar aplicación"><span class="fa fa-download" aria-hidden="true"></span></a>
-            </div>
           </div>
         </header>
-        <nav class="search-links" id="search-links" aria-label="Menú principal" hidden>
+        <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+        <nav class="search-links liquid-sidebar" id="search-links" aria-label="Menú principal" aria-hidden="true" inert>
           <a href="javascript:inicio()" class="search-link"><span class="fa fa-home" aria-hidden="true"></span> Inicio</a>
           <a href="javascript:servicios()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-cogs" aria-hidden="true"></span> Servicios</a>
-          <a href="javascript:categorias()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-credit-card" aria-hidden="true"></span> Tarjetas Digitales</a>
           <a href="javascript:comofunciona()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-globe" aria-hidden="true"></span> Sitios Web</a>
           <a href="javascript:planes()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-bullhorn" aria-hidden="true"></span> Publicidad</a>
-		 <a href="networks.html" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-globe" aria-hidden="true"></span>Network</a>
+		  <a href="networks.html" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><img class="imglins" src="img/logonetwork.png" alt="">Network</a>
+		  <a href="javascript:categorias()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-credit-card" aria-hidden="true"></span> Tarjetas Digitales</a>
           <a href="javascript:cerrarside()" class="search-link"><span class="fa fa-times-circle" aria-hidden="true"></span> Cerrar</a>
         </nav>
         <nav class="quick-links" aria-label="Enlaces rápidos">
@@ -399,11 +396,19 @@
 	 </section>
 	
  </div>
+        <div class="video-utility-dock" aria-label="Herramientas de la página">
+          <a href="javascript:instaler()" class="toolbar-icon install-toggle" id="install-toggle" aria-label="Instalar aplicación" title="Instalar aplicación"><span class="fa fa-download" aria-hidden="true"></span></a>
+          <button class="toolbar-icon qr-toggle" id="qr-toggle" type="button" aria-expanded="false" aria-controls="qr-footer" aria-label="Mostrar código QR" title="Mostrar código QR"><span class="fa fa-qrcode" aria-hidden="true"></span></button>
+        </div>
+        <section id="install-help" class="install-help" hidden aria-live="polite">
+          <p><strong>Instalar Cliconline Studios</strong></p>
+          <p>Si no aparece la ventana de instalación, abre el menú del navegador y selecciona “Instalar aplicación” o “Añadir a pantalla de inicio”. La opción depende del navegador y de que el sitio cumpla los requisitos de instalación.</p>
+        </section>
         <section class="qr-footer" id="qr-footer" hidden aria-label="Código QR para compartir">
           <div class="qr-footer-card">
             <button class="qr-close" id="qr-close" type="button" aria-label="Cerrar código QR" title="Cerrar">×</button>
-            <h2>Comparte CliconlineStudios</h2>
-            <p>Escanea este código QR para visitar nuestra página.</p>
+            <h2>CliconlineStudios</h2>
+            <p>Escanea este código QR.</p>
             <img src="img/qrclick.png" alt="Código QR de CliconlineStudios" loading="lazy">
           </div>
         </section>
@@ -414,19 +419,13 @@
 				
 	<section class="navi">
 		<ul>
-			<li >
-				<a href="networks.html"><img class="imglins" src="img/logonetwork.png" alt=""></a>
-			</li>
+	
 			<li>
 				<a href="javascript:msjpagos()"><span class="icon" id="icon2"><span class="fa fa-star-half-o"></span ></span>
 				<span class="title"></span></a>
 			</li>
 			<li>
 				<a href="javascript:inicio()" class="icon3active" id="icon3"><img class="imglins" src="img/clicknet.png" alt=""></a>
-			</li>
-			<li>
-				<a href="javascript:ftuser()"><span class="icon" id="icon4"><span class="fa fa-user"></span ></span>
-				<span class="title"></span></a>
 			</li>
 			<li>
 				<a href="javascript:shareplus()"><span class="icon5" id="icon5"><span class="fa fa-share-alt"></span ></span>
