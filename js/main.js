@@ -1,35 +1,70 @@
 
-// Registro seguro del Service Worker.
-if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
-    window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js").catch(() => {});
+// Registro del Service Worker y lógica de instalación PWA.
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register(new URL("./sw.js", document.baseURI).href).catch((error) => {
+      console.warn("No se pudo registrar el Service Worker:", error);
     });
+  });
 }
 
-// Instalación PWA: usar el diálogo nativo del navegador, sin alertas propias.
 let promptEvent = null;
 const installButton = document.getElementById("install-toggle");
-const legacyInstallButton = document.getElementById("descarga");
+const installHelp = document.getElementById("install-help");
+
+// Chrome/Edge entregan este evento cuando la PWA cumple sus requisitos de instalación.
 window.addEventListener("beforeinstallprompt", (event) => {
   event.preventDefault();
   promptEvent = event;
-  if (installButton) { installButton.hidden = false; installButton.setAttribute("aria-label", "Instalar aplicación"); }
-  if (legacyInstallButton) legacyInstallButton.style.display = "block";
+  if (installButton) {
+    installButton.hidden = false;
+    installButton.disabled = false;
+    installButton.setAttribute("aria-label", "Instalar aplicación");
+    installButton.title = "Instalar Cliconline Studios";
+  }
 });
-window.addEventListener("appinstalled", () => { promptEvent = null; });
+
+window.addEventListener("appinstalled", () => {
+  promptEvent = null;
+  if (installHelp) installHelp.hidden = true;
+  if (installButton) {
+    installButton.setAttribute("aria-label", "Aplicación instalada");
+    installButton.title = "Aplicación instalada";
+  }
+});
+
 async function instaler() {
+  // Debe ejecutarse directamente desde el clic del usuario.
   if (promptEvent) {
-    try { await promptEvent.prompt(); await promptEvent.userChoice; } catch (_) {}
+    const eventToPrompt = promptEvent;
     promptEvent = null;
+    try {
+      await eventToPrompt.prompt();
+      const choice = await eventToPrompt.userChoice;
+      if (choice && choice.outcome === "accepted" && installHelp) installHelp.hidden = true;
+    } catch (error) {
+      console.warn("El navegador no pudo abrir el diálogo de instalación:", error);
+      showInstallHelp();
+    }
     return;
   }
-  // Si el navegador no ofrece el diálogo de instalación, abrir instrucciones sin alertas.
-  const help = document.getElementById("install-help");
-  if (help) { help.hidden = !help.hidden; if (!help.hidden) help.scrollIntoView({behavior:"smooth",block:"nearest"}); }
+  // Safari/iOS y navegadores que no exponen beforeinstallprompt no permiten abrir
+  // el diálogo nativo por JavaScript; mostrar ayuda en lugar de no hacer nada.
+  showInstallHelp();
+}
+
+function showInstallHelp() {
+  if (!installHelp) return;
+  installHelp.hidden = false;
+  installHelp.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 window.instaler = instaler;
-if (installButton) installButton.addEventListener("click", (event) => { event.preventDefault(); instaler(); });
-if (legacyInstallButton) legacyInstallButton.addEventListener("click", (event) => { event.preventDefault(); instaler(); });
+if (installButton) {
+  installButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    instaler();
+  });
+}
 
 //   barrade navegacion
 
@@ -543,20 +578,6 @@ if (submitButton) submitButton.addEventListener("click", e => {
         });
       
       };
-
-      function instaler() {
-        Swal.fire({
-        icon: 'success',
-        title: 'Web Tarjeta Digital',
-        text: 'install mobile/desktop',
-        timer: 2500,
-        footer: 'CliconlineStudios'
-        });
-      
-      };
-     
-  
-
 const $content = document.getElementById('textareacopy');
       const $btncopy = document.getElementById('btcopi');
       const $title = document.getElementById('titlelink');

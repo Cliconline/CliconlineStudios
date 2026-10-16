@@ -1056,3 +1056,7 @@ nav#search-links.liquid-sidebar > a.search-link .fa { flex: 0 0 20px; width: 20p
 
 .install-help{max-width:520px;margin:12px auto;padding:16px 18px;border:1px solid rgba(255,255,255,.24);border-radius:16px;background:rgba(25,35,52,.82);color:#f7faff;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);line-height:1.5}
 .install-help[hidden]{display:none!important}
+
+/* Botón único de instalación PWA, junto al QR */
+.video-utility-dock .install-toggle { cursor: pointer; font: inherit; border: 1px solid rgba(255,255,255,.28); }
+.video-utility-dock .install-toggle[hidden] { display: none !important; }
