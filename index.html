@@ -23,28 +23,31 @@
   <!-- ID Particles.js -->
   <div id="particles-js"></div>
 
+ <!-- Header fijo fuera de la tarjeta para que sea visible al hacer scroll -->
+ <header class="site-toolbar site-toolbar-fixed" id="site-header">
+   <div class="toolbar-actions">
+     <button class="toolbar-icon" id="sidebar" type="button" aria-expanded="false" aria-controls="search-links" aria-label="Mostrar enlaces" title="Mostrar enlaces"><span class="fa fa-search" aria-hidden="true"></span></button>
+   </div>
+   <a class="site-brand" href="javascript:inicio()" aria-label="CliconlineStudios, inicio">Cliconline<span>Studios</span></a>
+   <div class="toolbar-right">
+     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false"><span class="theme-icon" aria-hidden="true">🌙</span><span class="theme-label">Modo oscuro</span></button>
+   </div>
+ </header>
+ <!-- Menú desplegable y backdrop: fuera de .tarjeta para que el z-index funcione correctamente -->
+ <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+ <nav class="search-links liquid-sidebar" id="search-links" aria-label="Menú principal" aria-hidden="true" inert>
+   <a href="javascript:inicio()" class="search-link"><span class="fa fa-home" aria-hidden="true"></span> Inicio</a>
+   <a href="javascript:servicios()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-cogs" aria-hidden="true"></span> Servicios</a>
+   <a href="javascript:comofunciona()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-globe" aria-hidden="true"></span> Sitios Web</a>
+   <a href="javascript:planes()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-bullhorn" aria-hidden="true"></span> Publicidad</a>
+   <a href="networks.html" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><img class="imglins" src="img/logonetwork.png" alt="">Network</a>
+   <a href="javascript:categorias()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-credit-card" aria-hidden="true"></span> Tarjetas Digitales</a>
+   <a href="javascript:cerrarside()" class="search-link"><span class="fa fa-times-circle" aria-hidden="true"></span> Cerrar</a>
+ </nav>
+
  <div class="contenedor" id="contenedor">
 	 
-	 <section class="tarjeta" id="tarjeta">
-        <header class="site-toolbar">
-          <div class="toolbar-actions">
-            <button class="toolbar-icon" id="sidebar" type="button" aria-expanded="false" aria-controls="search-links" aria-label="Mostrar enlaces" title="Mostrar enlaces"><span class="fa fa-search" aria-hidden="true"></span></button>
-          </div>
-          <a class="site-brand" href="javascript:inicio()" aria-label="CliconlineStudios, inicio">Cliconline<span>Studios</span></a>
-          <div class="toolbar-right">
-            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false"><span class="theme-icon" aria-hidden="true">🌙</span><span class="theme-label">Modo oscuro</span></button>
-          </div>
-        </header>
-        <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
-        <nav class="search-links liquid-sidebar" id="search-links" aria-label="Menú principal" aria-hidden="true" inert>
-          <a href="javascript:inicio()" class="search-link"><span class="fa fa-home" aria-hidden="true"></span> Inicio</a>
-          <a href="javascript:servicios()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-cogs" aria-hidden="true"></span> Servicios</a>
-          <a href="javascript:comofunciona()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-globe" aria-hidden="true"></span> Sitios Web</a>
-          <a href="javascript:planes()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-bullhorn" aria-hidden="true"></span> Publicidad</a>
-		  <a href="networks.html" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><img class="imglins" src="img/logonetwork.png" alt="">Network</a>
-		  <a href="javascript:categorias()" class="search-link" onclick="var info=document.getElementById('informacion'); if(info) info.style.display='none';" ><span class="fa fa-credit-card" aria-hidden="true"></span> Tarjetas Digitales</a>
-          <a href="javascript:cerrarside()" class="search-link"><span class="fa fa-times-circle" aria-hidden="true"></span> Cerrar</a>
-        </nav>
+	 	<section class="tarjeta" id="tarjeta">
         <nav class="quick-links" aria-label="Enlaces rápidos">
           <a href="https://whatsapp.com/channel/0029Va8FGeiBPzjV7dzFz62h" class="quick-link"><span class="fa fa-whatsapp" aria-hidden="true"></span><span>WhatsApp</span></a>
           <a href="https://groups.google.com/g/youtube-cliconline" class="quick-link"><span class="fa fa-users" aria-hidden="true"></span><span>Grupo</span></a>

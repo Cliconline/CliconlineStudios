@@ -141,3 +141,52 @@ html[data-theme="dark"] .formulario input[type="date"]::-webkit-calendar-picker-
   opacity: 0.95;
   cursor: pointer;
 }
+
+/* ===== HEADER FIJO - visible al hacer scroll ===== */
+.site-toolbar-fixed {
+  position: fixed !important;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(95%, 700px);
+  z-index: 10000 !important;
+  margin: 0 !important;
+  /* Glassmorphism mejorado para que siempre sea legible */
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  box-shadow: 0 4px 24px rgba(20, 40, 70, 0.15), 0 1px 0 rgba(255,255,255,0.6) !important;
+  border: 1px solid rgba(180, 200, 230, 0.45) !important;
+  border-radius: 18px !important;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Modo oscuro para el header fijo */
+html[data-theme="dark"] .site-toolbar-fixed {
+  background: rgba(20, 28, 44, 0.92) !important;
+  border-color: rgba(60, 80, 110, 0.6) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255,255,255,0.08) !important;
+}
+
+/* Compensar el espacio del header fijo en el contenedor */
+body {
+  padding-top: 80px;
+}
+
+/* El menú desplegable y el backdrop deben tener z-index altísimo al estar fuera de .tarjeta */
+nav#search-links.liquid-sidebar {
+  z-index: 10001 !important;
+}
+.sidebar-backdrop {
+  z-index: 10000 !important;
+}
+
+@media (max-width: 600px) {
+  .site-toolbar-fixed {
+    top: 6px;
+    width: calc(100% - 16px);
+  }
+  body {
+    padding-top: 74px;
+  }
+}

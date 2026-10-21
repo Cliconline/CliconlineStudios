@@ -111,12 +111,12 @@ window.addEventListener('popstate', e => {
 
 function inicio() {
     document.getElementById("informacion").style.display = "block";	
+     document.getElementById("screen4").style.display = "none";
     document.getElementById("portafolio").style.display = "none";
     document.getElementById("costos").style.display = "none";
     document.getElementById("comofunciona").style.display = "none";
     document.getElementById("planes").style.display = "none";
     document.getElementById("side").style.display = "none";
-    document.getElementById("screen4").style.display = "none";
     document.getElementById("sharelink").style.display = "none";
     naviactive();
     backarriba();
@@ -161,6 +161,7 @@ function backweb() {
     if (contador==1) {
         document.getElementById("informacion").style.display = "block";
         document.getElementById("portafolio").style.display = "none";
+         document.getElementById("screen4").style.display = "none";
         document.getElementById("planes").style.display = "none"
         document.getElementById("side").style.display = "none";
         document.getElementById("sharelink").style.display = "none";
