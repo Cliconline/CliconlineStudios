@@ -28,38 +28,6 @@ lottie-player {
     z-index: -1;
 }
 
-@keyframes banner {
-	0%, 23% {
-		background-image: url(../img/b1.png);
-		
-	}
-	25%, 45% {
-		background-image: url(../img/fondocode.jpg);
-	}
-	50%, 70% {
-		background-image: url(../img/fondom.jpg);
-	}
-	75%, 100% {
-		background-image: url(../img/banner4.png);
-	}
-}
-
-@keyframes bannerApp {
-	0%, 23% {
-		background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnY4Yif67uAc4VF0EDamdHoYDRKlW1wYGdvAm1X54BVeHMg8uNsItUbf7U1nMkJNwPyXC0577z8rsSSPQ-i2bYSHkzs8_vq9X1Z766s3YlIXx9bHooQI8sOhw00wYWfHPaZi-mAWcOBzSKjWGWGPRgaawWA7_EEMJk_smybR0J32_5b0rX6dprxSAW/w640-h274/bannerapp.png);
-		
-	}
-	25%, 45% {
-		background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3HjaQyfVfyWYssBt5M8Uj4mD9MLDLlKojzOTPrI3VHtgmZ9kKl11Z8VhfnxwWiW1oeARhFvXl-o7OFe9iFWpmFgY2UA7rPTz-DjlLHhUoMTzf6awexunVGgOFbBEb_JwMmw2V4KQqCpFNaSe7EmwsX59j1AkmM3tINYQeK2KM8lD4dbYL20q_wly1/w640-h274/bannerapp2.png);
-	}
-	50%, 70% {
-		background-image: url(../img/fondom.jpg);
-	}
-	75%, 100% {
-		background-image: url(../img/fondocode.jpg);
-	}
-}
-
 .contenedor {
 	width: 95%;
 	max-width: 700px;
@@ -78,29 +46,6 @@ lottie-player {
 	border-radius: 15px;
 	overflow: hidden;
 	z-index: 1000;	
-
-}
-
-
-.banner {
-	width: 100%;
-	animation: banner 8s infinite linear ;
-	background-size: 100% 100%;
-	position: static;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-}
-
-.banner2 {
-	width: 100%;
-	animation: bannerApp 8s infinite linear ;
-	background-size: 100% 100%;
-	position: static;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 
 }
 
@@ -225,22 +170,6 @@ lottie-player {
 	background: #00bfff;
 }
 
-@keyframes pulse2 {
-	0% {
-		transform: scale(2.99);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.315);
-	}
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.712);
-	}
-	100% {
-		transform: scale(.99);
-		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.548);
-	}
-	
-}
-
 .botoninicio {
 	position: absolute;
 	background: linear-gradient(102deg, #0099ffc7 40%, #0099ffc7 60%);
@@ -298,21 +227,6 @@ lottie-player {
 	
 }
 
-@keyframes pulse {
-	0% {
-		transform: scale(.99);
-		box-shadow: 0 0 0 0 rgba(9, 255, 0, 0.315);
-	}
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 5px rgba(12, 126, 255, 0.712);
-	}
-	100% {
-		transform: scale(.99);
-		box-shadow: 0 0 0 0 rgba(12, 15, 201, 0.548);
-	}
-	
-}
 
 .informacion .qr img {
 	text-align: center;

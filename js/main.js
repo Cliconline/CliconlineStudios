@@ -144,6 +144,7 @@ function servicios() {
     conta=0;
     contador=1;
     ids1();
+    irASeccion("portafolio");
    
 };
 
@@ -152,6 +153,16 @@ function backarriba(){
         top: 0,
         behavior: 'smooth'
         });       
+};
+
+// Scroll suave a una sección respetando el alto del header fijo
+function irASeccion(idSeccion) {
+    var seccion = document.getElementById(idSeccion);
+    if (!seccion) return;
+    var header = document.getElementById('site-header');
+    var offsetHeader = header ? header.offsetHeight + 12 : 90;
+    var posicion = seccion.getBoundingClientRect().top + window.pageYOffset - offsetHeader;
+    window.scrollTo({ top: posicion, behavior: 'smooth' });
 };
 
 let urlclick =`https://cliconline.github.io/CliconlineStudios`; 
@@ -199,8 +210,8 @@ function categorias() {
     document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=2;
-    backarriba();
     ids2();
+    irASeccion("costos");
         
     
     
@@ -217,8 +228,8 @@ function comofunciona() {
     document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=2;
-    backarriba();
-    ids2();  
+    ids2();
+    irASeccion("comofunciona");
     
 };
 
@@ -233,8 +244,8 @@ function planes() {
     document.getElementById("sharelink").style.display = "none";
     conta=0;
     contador=2;
-    backarriba();
     ids2();
+    irASeccion("planes");
 };
 
 
@@ -636,4 +647,87 @@ const shareData2 = {
     }
     };
     
+
+// ===== CONTADOR DE VISUALIZACIONES =====
+(function () {
+  // Fecha base y valor inicial
+  const BASE_DATE   = new Date(2026, 9, 1); // Octubre 2026 (mes índice 9)
+  const BASE_VIEWS  = 1_200_000;            // 1.2 M en la fecha base
+  const MONTHLY_INC = 1_000;               // +1 000 por mes
+
+  /** Calcula las views actuales según meses transcurridos */
+  function calcViews() {
+    const now = new Date();
+    const months =
+      (now.getFullYear() - BASE_DATE.getFullYear()) * 12 +
+      (now.getMonth()    - BASE_DATE.getMonth());
+    return BASE_VIEWS + Math.max(0, months) * MONTHLY_INC;
+  }
+
+  /** Formatea el número al estilo YouTube: 1.2M, 1.24M, 980K… */
+  function formatViews(n) {
+    if (n >= 1_000_000) {
+      const val = n / 1_000_000;
+      // Muestra un decimal solo si es significativo
+      return val % 1 === 0
+        ? val.toFixed(0) + 'M'
+        : parseFloat(val.toFixed(2)).toString().replace(/\.?0+$/, '') + 'M';
+    }
+    if (n >= 1_000) {
+      const val = n / 1_000;
+      return val % 1 === 0
+        ? val.toFixed(0) + 'K'
+        : parseFloat(val.toFixed(1)).toString() + 'K';
+    }
+    return n.toLocaleString('es');
+  }
+
+  /** Animación de conteo desde `from` hasta `to` */
+  function animateCount(el, from, to, duration) {
+    const start = performance.now();
+    function step(ts) {
+      const progress = Math.min((ts - start) / duration, 1);
+      // easeOutCubic
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(from + (to - from) * ease);
+      el.textContent = formatViews(current);
+      if (progress < 1) requestAnimationFrame(step);
+      else {
+        el.textContent = formatViews(to);
+        el.classList.add('updated');
+        setTimeout(() => el.classList.remove('updated'), 600);
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  /** Inicializa el contador cuando el elemento está visible */
+  function initCounter() {
+    const el = document.getElementById('views-number');
+    if (!el) return;
+
+    const target = calcViews();
+
+    // Arranca desde un valor ligeramente menor para el efecto de conteo
+    const startFrom = Math.max(0, target - 50_000);
+    animateCount(el, startFrom, target, 1800);
+  }
+
+  // Activa la animación cuando el contador entra en el viewport
+  const counterEl = document.getElementById('views-counter');
+  if (counterEl && 'IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          initCounter();
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+    obs.observe(counterEl);
+  } else if (counterEl) {
+    // Fallback sin IntersectionObserver
+    initCounter();
+  }
+})();
 
